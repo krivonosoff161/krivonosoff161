@@ -3,6 +3,9 @@
 This portfolio is organized around one idea: AI-assisted engineering should
 produce systems, evidence, and reviewable artifacts, not just chat output.
 
+For the active cross-repository work queue, see
+[Portfolio Execution Map](execution-map.md).
+
 ## Project Groups
 
 ### 1. Agentic AI Security

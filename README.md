@@ -113,6 +113,7 @@ research state and results.
 - LLM triage: [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter)
 - LLM routing: [llm-router](https://github.com/krivonosoff161/llm-router)
 - Agent workflow safety: [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
+- Portfolio execution map: [docs/execution-map.md](docs/execution-map.md)
 
 ## Contact
 
