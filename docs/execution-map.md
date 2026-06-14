@@ -1,34 +1,23 @@
 # Portfolio Execution Map
 
 Status: active working map  
-Last updated: 2026-06-12  
+Last updated: 2026-06-14  
 Scope: public repositories, private research boundary, and next execution order.
 
-This map turns the repository set into one portfolio instead of several
-unrelated tools.
-
-## Core Thesis
-
-The portfolio is about engineering discipline for agentic systems:
-
-```text
-route cheaply -> filter deterministically -> coordinate agents safely
--> validate without self-deception -> measure failure modes
-```
-
-The public repositories show reusable methods. Private repositories hold live
-trading results, candidate parameters, data snapshots, and operational state.
+This map keeps the repository set coherent. The goal is a working indie
+research profile, not a collection of unrelated Python repositories.
 
 ## Portfolio Layers
 
 | Layer | Repository | Role | Public claim |
 |---|---|---|---|
-| Agentic security | `agentic-security-harness` | Flagship defensive benchmark | Deterministic replay and measurement of agentic AI failure modes |
-| Trading validation | `honest-backtest` | Backtest skepticism layer | Kill weak strategies before they become decisions |
-| Trading system | `trading-bot-v2` plus private research state | Applied research pipeline | Pattern-level architecture, not private alpha or parameters |
+| Agentic security | `agentic-security-harness` | Flagship defensive benchmark | Deterministic evaluation of agentic AI boundary failures |
+| Transfer verification | `agentic-transfer-verifier` | New research line | Validate data, context, provenance, and authority across agent runtimes |
+| Agent workflow | `ai-agent-handoff` | Practical protocol + guard | Durable handoff files and simple guardrails for AI coding agents |
+| Trading system | `trading-bot-v2` | Applied research workbench | Scanner, Strategy Lab, data prep, and validation boundaries |
+| Trading validation | `honest-backtest` | Backtest skepticism layer | Kill weak trading ideas before they become decisions |
 | Cost control | `llm-cheap-filter` | Cheap-to-chief triage | Spend expensive model calls only where they matter |
 | Model access | `llm-router` | Thin role-tiered LLM router | Small auditable LLM call layer with cost logging |
-| Agent workflow | `ai-agent-handoff` | Cross-agent handoff and guard | Durable agent coordination without replaying full chat history |
 
 ## Public vs Private Boundary
 
@@ -51,13 +40,14 @@ Private:
 
 ## Execution Order
 
-### P0 - Portfolio Hygiene
+### P0 - GitHub Portfolio Hygiene
 
-Goal: make the GitHub profile and pinned repositories coherent.
+Goal: make the GitHub profile and main repositories read as a coherent research
+portfolio.
 
 Tasks:
 
-- keep the profile README as the portfolio entry point;
+- keep the profile README as the entry point;
 - keep each repository description aligned with its real scope;
 - add topics and releases only after each repo has a stable first-screen story;
 - avoid profitability, complete-security, or uniqueness claims;
@@ -65,72 +55,87 @@ Tasks:
 
 Exit criteria:
 
-- each pinned repository answers "what is this, why now, what is not claimed"
-  in the first screen;
-- profile links form a clear path through the portfolio.
+- each pinned repository answers "what is this, why now, what is not claimed";
+- profile links form a clear path through the portfolio;
+- supporting libraries do not distract from the two main research lines.
 
 ### P1 - Agentic Security Harness
 
-Goal: make the flagship repository read as a serious defensive benchmark.
+Goal: make the flagship repository read as a serious independent benchmark
+toolkit.
 
-Positioning:
+Current position:
 
-- not a live exploit tool;
-- not a general red-team scanner;
-- deterministic local benchmark for data-boundary, label-propagation, memory,
-  tool, provider, and handoff failures.
-
-Next tasks:
-
-- verify external references before changing public docs;
-- update prior-art docs with a careful distinction between scanners, runtime
-  defenses, benchmarks, and conformance-style tests;
-- add machine-readable mapping fields for standards only after verification;
-- expand corpus around data-envelope survival and label propagation;
-- keep all tests local, synthetic, and safe.
-
-Exit criteria:
-
-- README, corpus docs, competitors docs, and roadmap agree on the same
-  positioning;
-- benchmark claims are measurable through local `ash` commands;
-- no public doc implies complete protection or live offensive use.
-
-### P2 - Honest Backtest
-
-Goal: turn the project from a useful validation checklist into a credible
-anti-overfit library.
+- local deterministic targets;
+- external OpenAI-compatible checks;
+- schema validation;
+- run diffs;
+- HTML reports;
+- local run DB;
+- Docker/PyPI readiness docs.
 
 Next tasks:
 
-- add named statistical tests where appropriate;
-- document assumptions plainly;
-- keep examples synthetic and deterministic;
-- connect forward-ledger discipline to the private Strategy Lab workflow.
+- preserve the v1.0-readiness path;
+- keep schema compatibility explicit;
+- add showcase-level examples and docs only after validation;
+- avoid implying complete security or real-world exploit capability.
 
 Exit criteria:
 
-- a reviewer can see how the project differs from a normal backtest engine;
-- validation results reject weak ideas instead of blessing profitable-looking
-  runs.
+- new users can install, run, validate, report, and diff without private context;
+- benchmark claims are measurable through local `ash` commands.
+
+### P2 - Agentic Transfer Verifier
+
+Goal: create a new research toolkit for validating data handoffs between
+heterogeneous AI agent ecosystems.
+
+Scope:
+
+- data envelopes;
+- provenance;
+- trust levels;
+- authority boundaries;
+- approval binding;
+- stale/replayed context;
+- audit trail integrity;
+- cross-runtime handoff semantics.
+
+Non-scope:
+
+- no live exploitation;
+- no third-party abuse;
+- no vendor-specific credential handling;
+- no claim of universal standardization.
+
+Exit criteria for first slice:
+
+- problem statement;
+- boundary model;
+- simple envelope schema;
+- synthetic local examples;
+- tests for provenance and integrity checks;
+- clear link to `agentic-security-harness` and `ai-agent-handoff`.
 
 ### P3 - Trading Research System
 
 Goal: keep the public architecture useful while preserving private edge.
 
-Public work:
+Current public work:
 
-- document the pattern-level scanner pipeline;
-- document the strategy-lab process without publishing private candidate
-  results;
-- cross-link to `honest-backtest` as the validation layer;
-- keep source onboarding and LLM cost-control decisions auditable.
+- news/event scanner;
+- Strategy Lab;
+- data preparation;
+- candidate registry boundary;
+- no-live-trading docs.
 
-Private work:
+Next tasks:
 
-- store research outputs under the private research root;
-- keep candidate registries, Obsidian graphs, SQLite state, and reports private;
-- publish only sanitized examples and process descriptions.
+- integrate Strategy Lab with `honest-backtest`;
+- turn lite candidates into hard-validation requests;
+- build private setup library cards;
+- keep real results private.
 
 Exit criteria:
 
@@ -138,72 +143,53 @@ Exit criteria:
 - private results remain private;
 - scanner, Strategy Lab, and validation layers have a clear operating boundary.
 
-### P4 - LLM Cheap Filter
+### P4 - Honest Backtest
 
-Goal: make cost triage measurable, not just plausible.
-
-Next tasks:
-
-- add calibration and replay tooling;
-- add a savings report artifact;
-- document false-accept and false-escalate rates as first-class concepts;
-- compare honestly with adjacent cascade and routing projects.
-
-Exit criteria:
-
-- users can tune thresholds against their own data;
-- the library reports what it saved and what risk it introduced.
-
-### P5 - LLM Router
-
-Goal: keep the router small, auditable, and useful as infrastructure.
+Goal: make the project the validation layer for Strategy Lab candidates and a
+standalone anti-overfit toolkit.
 
 Next tasks:
 
-- add budget caps and warnings;
-- add role-level spending summaries;
-- document when to use this instead of a full gateway;
-- defer streaming/tools until the small core remains stable.
+- expose stable callable validation APIs;
+- document how Strategy Lab hands candidates to it;
+- keep examples synthetic and deterministic;
+- keep the language "kill bad ideas cheaply", not "certify strategies".
 
 Exit criteria:
 
-- the router remains easy to audit;
-- cost behavior is observable;
-- role tiers are the main conceptual primitive.
+- a reviewer can see how it differs from a normal backtest engine;
+- Strategy Lab can call it without shell scraping.
 
-### P6 - AI Agent Handoff
+### P5 - Agent Handoff
 
-Goal: align with emerging agent-file conventions without losing the
-cross-agent workflow.
+Goal: align the project with the transfer-verification research line without
+turning it into a large framework.
 
 Next tasks:
 
-- make templates compatible with common agent instruction files;
-- explain that the guard is not a sandbox;
-- add rule packs only if they remain simple and testable;
-- document full agent handoff round trips.
+- make the protocol relationship to `agentic-transfer-verifier` explicit;
+- keep the guard honest: guard, not sandbox;
+- add examples only where they prove a handoff property.
 
 Exit criteria:
 
-- the repository reads as a protocol plus guard, not just another hook list;
-- the safety boundary is honest.
+- the repository reads as a practical protocol plus guard;
+- deeper verification work lives in the new transfer project.
 
-## Verification Queue
+### P6 - LLM Infrastructure
 
-Claims from market research must be verified before public documentation uses
-them as facts.
+Goal: keep `llm-router` and `llm-cheap-filter` small, useful supporting
+libraries.
 
-Required verification:
+Next tasks:
 
-- current status of major agentic-security benchmarks and runtime defenses;
-- current OWASP, MITRE ATLAS, and NIST mappings;
-- acquisition or ownership changes;
-- active status, stars, releases, and licenses of named adjacent projects;
-- pricing or usage claims, if mentioned at all.
+- document when to use each;
+- keep cost behavior observable;
+- avoid over-positioning them as main portfolio projects.
 
-Rule:
+Exit criteria:
 
-If a fact can change, verify it from primary sources or mark it as unverified.
+- they support the main systems without pulling attention from them.
 
 ## Operating Rule
 

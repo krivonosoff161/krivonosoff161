@@ -1,122 +1,120 @@
 # Dmitry Krivonosov
 
-I build AI-assisted research systems for agentic security, LLM workflow
-automation, and trading research validation.
+I build AI-assisted research systems for agentic AI security, LLM workflow
+infrastructure, and trading-research validation.
 
-My work is not centered on one model, one provider, or one framework. The
-pattern is broader:
+The common thread is not a single model or framework. It is a working loop:
 
 ```text
-problem framing -> agent-assisted implementation -> tests -> audits -> traces -> reports
+question -> bounded system -> tests -> traces -> reports -> review -> next iteration
 ```
 
-I use coding agents as engineering leverage, not as a substitute for judgment:
-I define the problem, constraints, architecture, review criteria, and research
-direction; agents help implement, test, compare, and audit the work.
+I use coding agents as engineering leverage. The useful artifact is not the chat
+that produced the code; it is the code, tests, schemas, reports, and failure
+evidence that other people can inspect.
 
-## Current Focus
+## Active Research Lines
 
-- Agentic AI security: data boundaries, recipient control, tool permissions,
-  memory poisoning, replayable traces, and defensive benchmarks.
-- LLM workflow systems: cheap-to-chief routing, provider abstraction, model cost
-  control, and handoff protocols for multi-agent coding.
-- Trading research infrastructure: news scanning, market-context pipelines,
-  strategy discovery, validation discipline, and private result registries.
-- Research process design: turn vague ideas into reproducible experiments,
-  measurable artifacts, and reviewable code.
+| Line | Public projects | What it is for |
+|---|---|---|
+| Agentic AI security | [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness) | Defensive benchmark toolkit for agentic AI boundary failures, traces, scorecards, remediation, and model/runtime checks. |
+| Agent handoff and data transfer | [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff), [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier) | Durable handoff files, provenance, authority boundaries, and verification of data moving between agent runtimes. |
+| Trading research validation | [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2), [honest-backtest](https://github.com/krivonosoff161/honest-backtest) | News/event scanner, strategy research lab, backtest skepticism, setup validation, and private research state. |
+| LLM infrastructure | [llm-router](https://github.com/krivonosoff161/llm-router), [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter) | Cost-aware routing, cheap-to-chief filtering, provider-neutral calls, and controlled LLM spend. |
 
-## Flagship Project
+## Flagship: Agentic Security Harness
 
-### [Agentic Security Harness](https://github.com/krivonosoff161/agentic-security-harness)
+[Agentic Security Harness](https://github.com/krivonosoff161/agentic-security-harness)
+is the main public security project.
 
-A trace-first defensive benchmark for agentic AI failure modes.
+It is a defensive benchmark toolkit for measuring agentic AI failure modes with:
 
-It reproduces how LLM agents, tool chains, memory, and data boundaries fail in
-local synthetic targets, then captures each run as a portable trace and
-scorecard.
-
-What it demonstrates:
-
-- agentic data-boundary and recipient-control tests;
-- vulnerable vs protected replay;
 - deterministic local targets;
-- validation of benchmark artifacts;
-- safe research framing: no live exploitation, no real secrets, no third-party
-  abuse.
+- portable traces and scorecards;
+- scenario matrices and run diffs;
+- OpenAI-compatible external model/runtime checks;
+- remediation guidance;
+- schema validation and local report generation.
 
-This is the public security-research core of the portfolio.
+It is not a hacking toolkit and not a promise of complete protection. It is a
+measurement and learning lab for authorized, synthetic, local, or explicitly
+owned targets.
 
-## Applied Research System
+## Trading Research Stack
 
-### Trading research and scanner infrastructure
+The trading line is an applied research system, not a signal service.
 
-The main trading system is a private applied research project. Public
-repositories show selected methods and tools, while real data, candidate
-results, parameters, and strategy conclusions stay private.
+Public repositories show the method:
 
-The system explores:
+- [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2) - local
+  research workbench with scanner, market-data preparation, strategy lab, and
+  paper-only validation boundaries.
+- [honest-backtest](https://github.com/krivonosoff161/honest-backtest) - layered
+  validation toolkit that tries to kill weak backtests before they become
+  decisions.
 
-- news ingestion and machine-readable event extraction;
-- cheap-model filtering before expensive model review;
-- outcome logging and no-go audits;
-- strategy research queues;
-- validation before any forward/paper/live use;
-- private candidate registries and review packs.
+Private repositories hold real candidate rankings, parameter libraries,
+operational state, and market-specific findings. The public claim is process
+quality, not trading profitability.
 
-The public claim is process quality, not trading profitability.
+## Agent Handoff / Transfer Research
 
-## Supporting Projects
+AI agents increasingly pass files, memory, tool output, approvals, and context
+between runtimes. That handoff is often treated as plain text, but it carries
+trust, provenance, and authority.
 
-| Project | What it shows |
-|---|---|
-| [honest-backtest](https://github.com/krivonosoff161/honest-backtest) | A layered validation architecture for killing weak trading ideas before they cost money. |
-| [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter) | A zero-dependency cheap-to-chief triage pipeline for reducing LLM cost and noise. |
-| [llm-router](https://github.com/krivonosoff161/llm-router) | A small async router for role-tiered LLM calls across OpenAI-compatible providers and Yandex AI Studio. |
-| [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff) | A file-based handoff protocol for AI coding agents, plus a safety guard for sensitive paths and commands. |
+Current and planned work:
+
+- [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff) - a
+  file-based handoff protocol for AI coding agents plus a small guard hook.
+- [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier) - research toolkit for verifying data
+  envelopes, provenance, authority boundaries, and audit trails across
+  heterogeneous agent ecosystems.
 
 ## How I Work
 
-I work as an AI-assisted systems builder:
-
 1. Find a real operational weakness.
-2. Convert it into a testable research question.
-3. Build a small deterministic harness around it.
-4. Let agents implement and review under explicit constraints.
-5. Verify with tests, reports, and adversarial review.
-6. Keep private results private and publish reusable methods.
+2. Turn it into a bounded research question.
+3. Build a deterministic harness or workflow around it.
+4. Use agents for implementation and review under explicit constraints.
+5. Verify with tests, schemas, reports, and adversarial review.
+6. Publish reusable methods while keeping private data and credentials private.
 
-The important part is not that an agent wrote code. The important part is that
-the process produces artifacts other people can inspect:
+## Public vs Private Boundary
 
-- tests;
-- traces;
-- scorecards;
-- examples;
-- documentation;
-- failure reports;
-- conservative claims.
+Public:
 
-## What I Do Not Claim
+- methods;
+- test harnesses;
+- synthetic examples;
+- docs;
+- schemas;
+- sanitized reports;
+- reproducible CLI flows.
 
-- I do not claim that a benchmark proves complete security.
-- I do not claim that a backtest proves a profitable strategy.
-- I do not publish private trading results or production credentials.
-- I do not present offensive security work as a product.
+Private:
 
-The public repositories are method-first. The private systems hold the live
-research state and results.
+- trading results and candidate rankings;
+- live parameters;
+- provider credentials;
+- private logs;
+- operational dashboards;
+- raw market research state.
 
-## Useful Starting Points
+## Start Here
 
 - Security benchmark: [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness)
-- Backtest validation: [honest-backtest](https://github.com/krivonosoff161/honest-backtest)
-- LLM triage: [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter)
+- Trading validation: [honest-backtest](https://github.com/krivonosoff161/honest-backtest)
+- Trading research workbench: [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2)
+- Agent handoff protocol: [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
+- Transfer verification: [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier)
 - LLM routing: [llm-router](https://github.com/krivonosoff161/llm-router)
-- Agent workflow safety: [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
-- Portfolio execution map: [docs/execution-map.md](docs/execution-map.md)
+- LLM triage: [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter)
+- Portfolio map: [docs/portfolio.md](docs/portfolio.md)
+- Execution map: [docs/execution-map.md](docs/execution-map.md)
 
 ## Contact
 
-GitHub is the best place to start. I am interested in practical AI security,
+GitHub is the best starting point. I am interested in practical AI security,
 agentic workflow safety, LLM infrastructure, and research systems where
 measurement matters more than hype.

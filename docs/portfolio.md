@@ -1,10 +1,21 @@
 # Portfolio Map
 
-This portfolio is organized around one idea: AI-assisted engineering should
-produce systems, evidence, and reviewable artifacts, not just chat output.
+This portfolio is organized around practical research systems. The public
+repositories show reusable methods, contracts, and tools; private repositories
+hold sensitive research state and real results.
 
-For the active cross-repository work queue, see
-[Portfolio Execution Map](execution-map.md).
+## Core Thesis
+
+AI-assisted engineering should produce reviewable systems:
+
+```text
+bounded problem -> reproducible run -> machine-readable artifact -> review -> next test
+```
+
+The same discipline appears in both active directions:
+
+- agentic AI systems need measurable safety and handoff boundaries;
+- trading research needs validation before any setup becomes a decision.
 
 ## Project Groups
 
@@ -17,39 +28,60 @@ Repository:
 Role:
 
 - flagship public project;
-- defensive security benchmark;
-- synthetic local targets only;
-- portable traces and scorecards;
-- data-boundary and recipient-control focus.
+- defensive benchmark toolkit;
+- deterministic local targets;
+- trace, scorecard, matrix, diff, report, and remediation artifacts;
+- external model/runtime checks through explicit OpenAI-compatible endpoints.
 
 Why it matters:
 
-Agentic systems increasingly move data between tools, memory, providers,
-applications, and users. A system prompt is not a security boundary. The project
-turns those risks into safe, reproducible defensive tests.
+Agentic systems move data between tools, memory, providers, files, users, and
+other agents. A system prompt is not a security boundary. This project turns
+those risks into safe, reproducible defensive checks.
 
-### 2. Trading Research Infrastructure
+### 2. Agent Handoff and Transfer Verification
 
-Repository state:
+Repositories:
 
-- private applied system;
-- selected methods extracted into public repositories.
+- [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
+- [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier)
 
 Role:
 
-- news scanner;
-- cheap-to-chief LLM review;
-- outcome audit;
-- strategy research lab;
-- private candidate registry.
+- file-based handoff protocol for AI coding agents;
+- guard hook for sensitive paths and commands;
+- verifier for data envelopes, provenance, trust levels, approvals,
+  audit trails, and cross-runtime handoff semantics.
 
 Why it matters:
 
-Trading research fails when noisy signals, overfit backtests, and narrative
-confidence are treated as evidence. The system is designed to log, reject, and
-validate ideas before they become decisions.
+Agent ecosystems increasingly pass context and authority through plain files,
+tool results, chat summaries, memory entries, and model-generated plans. The
+research question is whether those handoffs can be validated instead of merely
+trusted.
 
-### 3. Backtest Validation
+### 3. Trading Research Infrastructure
+
+Repositories:
+
+- [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2)
+- private [trading-bot-research](https://github.com/krivonosoff161/trading-bot-research)
+
+Role:
+
+- news scanner and market-context pipeline;
+- strategy research lab;
+- private candidate registry;
+- data preparation and outcome tracking;
+- future execution integration behind explicit gates.
+
+Why it matters:
+
+Trading research fails when noisy events, overfit parameters, and narrative
+confidence are treated as evidence. The public repository shows the machinery;
+the private repository stores real candidate results and parameters.
+
+### 4. Backtest Validation
 
 Repository:
 
@@ -57,17 +89,18 @@ Repository:
 
 Role:
 
+- layered validation toolkit;
 - synthetic examples;
-- validation layers;
-- anti-overfitting framing;
-- forward-log discipline.
+- costs, splits, robustness, overfit statistics, forward logs, and adversarial
+  review;
+- intended validation layer for Strategy Lab candidates.
 
 Why it matters:
 
-Most bad strategies can be killed cheaply before real money or live systems are
-involved.
+Most weak trading ideas can be killed before they reach paper-forward tracking
+or any execution system.
 
-### 4. LLM Infrastructure
+### 5. LLM Infrastructure
 
 Repositories:
 
@@ -83,27 +116,9 @@ Role:
 
 Why it matters:
 
-In agentic systems, using the best model for every step is usually wasteful.
-Most work should be filtered, summarized, or classified cheaply before an
-expensive model is asked to decide.
-
-### 5. Agent Workflow Safety
-
-Repository:
-
-- [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
-
-Role:
-
-- file-based agent handoff protocol;
-- reduced context replay;
-- PreToolUse safety guard;
-- simple agent coordination pattern.
-
-Why it matters:
-
-Agentic coding workflows need memory, accountability, and guardrails. Chat
-history alone is not a reliable operating surface.
+In agentic systems, expensive models should be used for the decisions that
+actually need them. Cheap deterministic filters and role-tiered routing keep
+costs visible.
 
 ## Public vs Private Boundary
 
@@ -113,6 +128,7 @@ Public:
 - harnesses;
 - examples;
 - tests;
+- schemas;
 - documentation;
 - sanitized reports.
 
@@ -122,7 +138,7 @@ Private:
 - live parameters;
 - credentials;
 - raw private logs;
-- candidate strategies;
+- candidate strategy rankings;
 - operational dashboards.
 
 This split is intentional. The public work shows process quality; the private
