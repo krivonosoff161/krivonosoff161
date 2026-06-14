@@ -113,6 +113,12 @@ Private:
 - Portfolio map: [docs/portfolio.md](docs/portfolio.md)
 - Execution map: [docs/execution-map.md](docs/execution-map.md)
 
+## Active Boards
+
+- [Agentic AI Security Platform](https://github.com/users/krivonosoff161/projects/1)
+- [Trading Research Platform](https://github.com/users/krivonosoff161/projects/2)
+- [LLM Infrastructure](https://github.com/users/krivonosoff161/projects/3)
+
 ## Contact
 
 GitHub is the best starting point. I am interested in practical AI security,
