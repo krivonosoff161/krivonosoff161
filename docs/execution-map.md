@@ -1,7 +1,7 @@
-# Portfolio Execution Map
+﻿# Portfolio Execution Map
 
-Status: active working map  
-Last updated: 2026-06-14  
+Status: active working map
+Last updated: 2026-06-14
 Scope: public repositories, private research boundary, and next execution order.
 
 This map keeps the repository set coherent. The goal is a working indie
