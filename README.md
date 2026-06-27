@@ -13,11 +13,20 @@ I use coding agents as engineering leverage. The useful artifact is not the chat
 that produced the code; it is the code, tests, schemas, reports, and failure
 evidence that other people can inspect.
 
+## Current Focus
+
+My main public security project is
+[Agentic Security Harness](https://github.com/krivonosoff161/agentic-security-harness):
+a defensive benchmark for testing whether AI coding agents treat untrusted repo text as
+data instead of authority. The included local demo compares a vulnerable synthetic agent
+against a protected version across 24 boundary-failure patterns and records traces,
+scorecards, and remediation output.
+
 ## Active Research Lines
 
 | Line | Public projects | What it is for |
 |---|---|---|
-| Agentic AI security | [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness) | Defensive benchmark toolkit for agentic AI boundary failures, traces, scorecards, remediation, and model/runtime checks. |
+| Agentic AI security | [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness) | Defensive benchmark toolkit for checking repo-text, authority, memory, tool, approval, and audit boundaries with traces, scorecards, and remediation. |
 | Agent handoff and data transfer | [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff), [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier) | Durable handoff files, provenance, authority boundaries, and verification of data moving between agent runtimes. |
 | Trading research validation | [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2), [honest-backtest](https://github.com/krivonosoff161/honest-backtest) | News/event scanner, strategy research lab, backtest skepticism, setup validation, and private research state. |
 | LLM infrastructure | [llm-router](https://github.com/krivonosoff161/llm-router), [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter) | Cost-aware routing, cheap-to-chief filtering, provider-neutral calls, and controlled LLM spend. |
