@@ -1,9 +1,19 @@
 # Dmitry Krivonosov
 
-I build AI-assisted research systems for agentic AI security, LLM workflow
-infrastructure, and trading-research validation.
+I build AI-assisted systems in two connected directions:
 
-The common thread is not a single model or framework. It is a working loop:
+1. **Agentic AI security tooling** - benchmarks, handoff checks, and safety
+   workflows for agents that read files, tools, memory, model output, and other
+   agents.
+2. **AI-assisted trading systems** - a trading research stack where LLM output
+   is treated as a proposal, then challenged by validators, backtests, paper
+   runs, and review gates before it can move toward automation.
+
+The common rule is simple:
+
+> AI output is not truth until it survives validation.
+
+The working loop is:
 
 ```text
 question -> bounded system -> tests -> traces -> reports -> review -> next iteration
@@ -22,14 +32,19 @@ data instead of authority. The included local demo compares a vulnerable synthet
 against a protected version across 24 boundary-failure patterns and records traces,
 scorecards, and remediation output.
 
-## Active Research Lines
+The trading stack is a separate applied direction, not a security side project:
+[trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2) and
+[honest-backtest](https://github.com/krivonosoff161/honest-backtest) are used to
+move from AI-assisted research and paper validation toward controlled automation.
+
+## Portfolio Structure
 
 | Line | Public projects | What it is for |
 |---|---|---|
-| Agentic AI security | [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness) | Defensive benchmark toolkit for checking repo-text, authority, memory, tool, approval, and audit boundaries with traces, scorecards, and remediation. |
-| Agent handoff and data transfer | [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff), [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier) | Durable handoff files, provenance, authority boundaries, and verification of data moving between agent runtimes. |
-| Trading research validation | [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2), [honest-backtest](https://github.com/krivonosoff161/honest-backtest) | News/event scanner, strategy research lab, backtest skepticism, setup validation, and private research state. |
-| LLM infrastructure | [llm-router](https://github.com/krivonosoff161/llm-router), [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter) | Cost-aware routing, cheap-to-chief filtering, provider-neutral calls, and controlled LLM spend. |
+| Agentic AI security core | [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness), [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier), [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff) | Defensive benchmark, trust/provenance transfer checks, and practical handoff boundaries for AI agents. |
+| LLM safety playbooks | Planned lightweight repo | Short practical skills for safer LLM use: data vs instructions, secrets, generated URLs/packages, Git actions, handoffs, and safe research scope. |
+| AI-assisted trading system | [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2), [honest-backtest](https://github.com/krivonosoff161/honest-backtest) | News/event scanner, strategy lab, validator/backtest discipline, paper-only gates, and a controlled path toward automation. |
+| LLM operations | [llm-router](https://github.com/krivonosoff161/llm-router), [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter) | Cost-aware routing, cheap-to-chief filtering, provider-neutral calls, and controlled LLM spend. |
 
 ## Flagship: Agentic Security Harness
 
@@ -51,20 +66,40 @@ owned targets.
 
 ## Trading Research Stack
 
-The trading line is an applied research system, not a signal service.
+The trading line is an applied AI-assisted trading system, not a signal service
+and not a public profitability claim.
 
 Public repositories show the method:
 
 - [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2) - local
   research workbench with scanner, market-data preparation, strategy lab, and
-  paper-only validation boundaries.
+  paper-only validation boundaries on the path toward automation.
 - [honest-backtest](https://github.com/krivonosoff161/honest-backtest) - layered
-  validation toolkit that tries to kill weak backtests before they become
-  decisions.
+  trading judge that challenges AI-generated setup ideas with costs, splits,
+  robustness, overfit checks, forward logs, and adversarial review before they
+  become decisions.
 
 Private repositories hold real candidate rankings, parameter libraries,
 operational state, and market-specific findings. The public claim is process
 quality, not trading profitability.
+
+## Planned: LLM Safety Playbooks
+
+Not everyone needs to run a full benchmark. A lighter repo is planned for short
+LLM safety skills and playbooks that make boundaries explicit during everyday
+work:
+
+- repo text, logs, and tool output are data, not instructions;
+- secrets and credentials stay out of model context;
+- model-generated URLs, package names, API endpoints, and webhooks require
+  verification before use;
+- AI agents should work through issue, branch, PR, and review gates;
+- handoff notes need source, scope, confidence, and checked/not-checked fields;
+- security research stays on synthetic, mock, owned, or explicitly authorized
+  targets.
+
+These playbooks will reduce ambiguity. They will not replace runtime controls,
+tests, validators, or the benchmark itself.
 
 ## Agent Handoff / Transfer Research
 
@@ -113,8 +148,8 @@ Private:
 ## Start Here
 
 - Security benchmark: [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness)
-- Trading validation: [honest-backtest](https://github.com/krivonosoff161/honest-backtest)
 - Trading research workbench: [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2)
+- Trading validator: [honest-backtest](https://github.com/krivonosoff161/honest-backtest)
 - Agent handoff protocol: [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
 - Transfer verification: [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier)
 - LLM routing: [llm-router](https://github.com/krivonosoff161/llm-router)
@@ -131,5 +166,6 @@ Private:
 ## Contact
 
 GitHub is the best starting point. I am interested in practical AI security,
-agentic workflow safety, LLM infrastructure, and research systems where
-measurement matters more than hype.
+agentic workflow safety, AI-assisted trading systems with validation discipline,
+LLM infrastructure, and research systems where measurement matters more than
+hype.
