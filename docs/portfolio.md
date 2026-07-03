@@ -72,7 +72,7 @@ Repositories:
 
 - [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2)
 - [honest-backtest](https://github.com/krivonosoff161/honest-backtest)
-- private [trading-bot-research](https://github.com/krivonosoff161/trading-bot-research)
+- private trading research workspace
 
 Role:
 
