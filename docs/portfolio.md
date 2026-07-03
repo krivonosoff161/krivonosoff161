@@ -52,7 +52,7 @@ those risks into safe, reproducible defensive checks.
 
 Repository:
 
-- planned lightweight repo
+- [llm-safety-playbooks](https://github.com/krivonosoff161/llm-safety-playbooks)
 
 Role:
 

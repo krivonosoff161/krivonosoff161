@@ -19,7 +19,7 @@ different directions:
 | Agentic security core | `agentic-security-harness` | Flagship defensive benchmark | Deterministic evaluation of agentic AI boundary failures |
 | Transfer verification | `agentic-transfer-verifier` | Trust/provenance research line | Validate data, context, provenance, and authority across agent runtimes |
 | Agent workflow | `ai-agent-handoff` | Practical protocol + guard | Durable handoff files and simple guardrails for AI coding agents |
-| LLM safety playbooks | planned repo | Lightweight practical skills | Help users make LLM boundaries explicit without running the full benchmark |
+| LLM safety playbooks | `llm-safety-playbooks` | Lightweight practical skills | Help users make LLM boundaries explicit without running the full benchmark |
 | AI-assisted trading system | `trading-bot-v2` | Applied trading workbench | Scanner, Strategy Lab, paper boundaries, and automation path |
 | Trading validator | `honest-backtest` | Backtest and setup judge | Challenge AI-generated trading ideas before they become decisions |
 | Cost control | `llm-cheap-filter` | Cheap-to-chief triage | Spend expensive model calls only where they matter |
@@ -94,7 +94,7 @@ Exit criteria:
 
 ### P2 - LLM Safety Playbooks
 
-Goal: create a lightweight practical repo that turns recurring agentic safety
+Goal: grow a lightweight practical repo that turns recurring agentic safety
 lessons into short skills and playbooks.
 
 Scope:

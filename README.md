@@ -42,7 +42,7 @@ move from AI-assisted research and paper validation toward controlled automation
 | Line | Public projects | What it is for |
 |---|---|---|
 | Agentic AI security core | [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness), [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier), [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff) | Defensive benchmark, trust/provenance transfer checks, and practical handoff boundaries for AI agents. |
-| LLM safety playbooks | Planned lightweight repo | Short practical skills for safer LLM use: data vs instructions, secrets, generated URLs/packages, Git actions, handoffs, and safe research scope. |
+| LLM safety playbooks | [llm-safety-playbooks](https://github.com/krivonosoff161/llm-safety-playbooks) | Short practical skills for safer LLM use: data vs instructions, secrets, generated URLs/packages, Git actions, handoffs, and safe research scope. |
 | AI-assisted trading system | [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2), [honest-backtest](https://github.com/krivonosoff161/honest-backtest) | News/event scanner, strategy lab, validator/backtest discipline, paper-only gates, and a controlled path toward automation. |
 | LLM operations | [llm-router](https://github.com/krivonosoff161/llm-router), [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter) | Cost-aware routing, cheap-to-chief filtering, provider-neutral calls, and controlled LLM spend. |
 
@@ -83,9 +83,9 @@ Private repositories hold real candidate rankings, parameter libraries,
 operational state, and market-specific findings. The public claim is process
 quality, not trading profitability.
 
-## Planned: LLM Safety Playbooks
+## LLM Safety Playbooks
 
-Not everyone needs to run a full benchmark. A lighter repo is planned for short
+Not everyone needs to run a full benchmark. A lighter repo now holds short
 LLM safety skills and playbooks that make boundaries explicit during everyday
 work:
 
