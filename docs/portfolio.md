@@ -1,8 +1,12 @@
 # Portfolio Map
 
-This portfolio is organized around practical research systems. The public
-repositories show reusable methods, contracts, and tools; private repositories
-hold sensitive research state and real results.
+This portfolio is organized around two connected but different directions:
+
+1. Agentic AI security tooling.
+2. AI-assisted trading systems with validator/backtest discipline.
+
+The public repositories show reusable methods, contracts, and tools; private
+repositories hold sensitive research state and real results.
 
 ## Core Thesis
 
@@ -14,16 +18,20 @@ bounded problem -> reproducible run -> machine-readable artifact -> review -> ne
 
 The same discipline appears in both active directions:
 
-- agentic AI systems need measurable safety and handoff boundaries;
-- trading research needs validation before any setup becomes a decision.
+- agentic AI systems need measurable safety, provenance, and handoff
+  boundaries;
+- AI-assisted trading needs validators, backtests, paper runs, and review gates
+  before a model-generated setup becomes a decision.
 
 ## Project Groups
 
 ### 1. Agentic AI Security
 
-Repository:
+Repositories:
 
 - [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness)
+- [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier)
+- [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
 
 Role:
 
@@ -32,6 +40,7 @@ Role:
 - deterministic local targets;
 - trace, scorecard, matrix, diff, report, and remediation artifacts;
 - external model/runtime checks through explicit OpenAI-compatible endpoints.
+- practical handoff files and provenance/authority transfer checks.
 
 Why it matters:
 
@@ -39,68 +48,50 @@ Agentic systems move data between tools, memory, providers, files, users, and
 other agents. A system prompt is not a security boundary. This project turns
 those risks into safe, reproducible defensive checks.
 
-### 2. Agent Handoff and Transfer Verification
+### 2. LLM Safety Playbooks
 
-Repositories:
+Repository:
 
-- [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
-- [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier)
+- [llm-safety-playbooks](https://github.com/krivonosoff161/llm-safety-playbooks)
 
 Role:
 
-- file-based handoff protocol for AI coding agents;
-- guard hook for sensitive paths and commands;
-- verifier for data envelopes, provenance, trust levels, approvals,
-  audit trails, and cross-runtime handoff semantics.
+- short practical skills for everyday LLM use;
+- prompt/workflow guidance that makes boundaries explicit;
+- data-vs-instruction, secret handling, generated-resource verification,
+  Git/PR safety, handoff verification, and safe research scope.
 
 Why it matters:
 
-Agent ecosystems increasingly pass context and authority through plain files,
-tool results, chat summaries, memory entries, and model-generated plans. The
-research question is whether those handoffs can be validated instead of merely
-trusted.
+Not every user needs to run a benchmark. Some need a small set of repeatable
+skills that reduce ambiguity before a model or coding agent acts.
 
-### 3. Trading Research Infrastructure
+### 3. AI-Assisted Trading System
 
 Repositories:
 
 - [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2)
-- private [trading-bot-research](https://github.com/krivonosoff161/trading-bot-research)
+- [honest-backtest](https://github.com/krivonosoff161/honest-backtest)
+- private trading research workspace
 
 Role:
 
 - news scanner and market-context pipeline;
 - strategy research lab;
+- validator/backtest discipline for AI-generated setup ideas;
 - private candidate registry;
 - data preparation and outcome tracking;
-- future execution integration behind explicit gates.
+- paper-only validation boundaries;
+- future automation behind explicit gates.
 
 Why it matters:
 
 Trading research fails when noisy events, overfit parameters, and narrative
-confidence are treated as evidence. The public repository shows the machinery;
-the private repository stores real candidate results and parameters.
+confidence are treated as evidence. In this line, LLM output is a proposal. The
+validator/backtest layer tries to kill weak setups before they reach paper
+tracking or automation.
 
-### 4. Backtest Validation
-
-Repository:
-
-- [honest-backtest](https://github.com/krivonosoff161/honest-backtest)
-
-Role:
-
-- layered validation toolkit;
-- synthetic examples;
-- costs, splits, robustness, overfit statistics, forward logs, and adversarial
-  review;
-- intended validation layer for Strategy Lab candidates.
-
-Why it matters:
-
-Most weak trading ideas can be killed before they reach paper-forward tracking
-or any execution system.
-
-### 5. LLM Infrastructure
+### 4. LLM Operations
 
 Repositories:
 

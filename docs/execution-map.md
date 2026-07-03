@@ -1,21 +1,27 @@
 ﻿# Portfolio Execution Map
 
 Status: active working map
-Last updated: 2026-06-14
+Last updated: 2026-07-03
 Scope: public repositories, private research boundary, and next execution order.
 
-This map keeps the repository set coherent. The goal is a working indie
-research profile, not a collection of unrelated Python repositories.
+This map keeps the repository set coherent. The goal is not a collection of
+unrelated Python repositories. It is a public profile with two connected but
+different directions:
+
+1. Agentic AI security tooling.
+2. AI-assisted trading systems with validation discipline and a
+   paper-to-automation path.
 
 ## Portfolio Layers
 
 | Layer | Repository | Role | Public claim |
 |---|---|---|---|
-| Agentic security | `agentic-security-harness` | Flagship defensive benchmark | Deterministic evaluation of agentic AI boundary failures |
-| Transfer verification | `agentic-transfer-verifier` | New research line | Validate data, context, provenance, and authority across agent runtimes |
+| Agentic security core | `agentic-security-harness` | Flagship defensive benchmark | Deterministic evaluation of agentic AI boundary failures |
+| Transfer verification | `agentic-transfer-verifier` | Trust/provenance research line | Validate data, context, provenance, and authority across agent runtimes |
 | Agent workflow | `ai-agent-handoff` | Practical protocol + guard | Durable handoff files and simple guardrails for AI coding agents |
-| Trading system | `trading-bot-v2` | Applied research workbench | Scanner, Strategy Lab, data prep, and validation boundaries |
-| Trading validation | `honest-backtest` | Backtest skepticism layer | Kill weak trading ideas before they become decisions |
+| LLM safety playbooks | `llm-safety-playbooks` | Lightweight practical skills | Help users make LLM boundaries explicit without running the full benchmark |
+| AI-assisted trading system | `trading-bot-v2` | Applied trading workbench | Scanner, Strategy Lab, paper boundaries, and automation path |
+| Trading validator | `honest-backtest` | Backtest and setup judge | Challenge AI-generated trading ideas before they become decisions |
 | Cost control | `llm-cheap-filter` | Cheap-to-chief triage | Spend expensive model calls only where they matter |
 | Model access | `llm-router` | Thin role-tiered LLM router | Small auditable LLM call layer with cost logging |
 
@@ -86,7 +92,37 @@ Exit criteria:
 - new users can install, run, validate, report, and diff without private context;
 - benchmark claims are measurable through local `ash` commands.
 
-### P2 - Agentic Transfer Verifier
+### P2 - LLM Safety Playbooks
+
+Goal: grow a lightweight practical repo that turns recurring agentic safety
+lessons into short skills and playbooks.
+
+Scope:
+
+- data vs instruction boundaries;
+- secret and credential handling;
+- model-generated URL/package/API endpoint verification;
+- issue/branch/PR safety for coding agents;
+- handoff verification fields;
+- safe research scope for synthetic, mock, owned, or explicitly authorized
+  targets.
+
+Non-scope:
+
+- no claim that prompts alone provide security;
+- no replacement for runtime controls, validators, tests, or the benchmark;
+- no live exploit instructions;
+- no provider abuse.
+
+Exit criteria for first slice:
+
+- repository exists;
+- README explains the limitation clearly;
+- 5-6 short skills exist as Markdown files;
+- each skill has purpose, when to use, boundaries, and example wording;
+- profile links it as a practical entry point, not a completed security system.
+
+### P3 - Agentic Transfer Verifier
 
 Goal: create a new research toolkit for validating data handoffs between
 heterogeneous AI agent ecosystems.
@@ -118,9 +154,10 @@ Exit criteria for first slice:
 - tests for provenance and integrity checks;
 - clear link to `agentic-security-harness` and `ai-agent-handoff`.
 
-### P3 - Trading Research System
+### P4 - AI-Assisted Trading System
 
-Goal: keep the public architecture useful while preserving private edge.
+Goal: keep the public architecture useful while preserving private edge and
+make the validator/backtest role explicit.
 
 Current public work:
 
@@ -135,6 +172,7 @@ Next tasks:
 - integrate Strategy Lab with `honest-backtest`;
 - turn lite candidates into hard-validation requests;
 - build private setup library cards;
+- keep LLM output classified as proposal, not decision;
 - keep real results private.
 
 Exit criteria:
@@ -143,7 +181,7 @@ Exit criteria:
 - private results remain private;
 - scanner, Strategy Lab, and validation layers have a clear operating boundary.
 
-### P4 - Honest Backtest
+### P5 - Honest Backtest
 
 Goal: make the project the validation layer for Strategy Lab candidates and a
 standalone anti-overfit toolkit.
@@ -160,7 +198,7 @@ Exit criteria:
 - a reviewer can see how it differs from a normal backtest engine;
 - Strategy Lab can call it without shell scraping.
 
-### P5 - Agent Handoff
+### P6 - Agent Handoff
 
 Goal: align the project with the transfer-verification research line without
 turning it into a large framework.
@@ -176,7 +214,7 @@ Exit criteria:
 - the repository reads as a practical protocol plus guard;
 - deeper verification work lives in the new transfer project.
 
-### P6 - LLM Infrastructure
+### P7 - LLM Infrastructure
 
 Goal: keep `llm-router` and `llm-cheap-filter` small, useful supporting
 libraries.
