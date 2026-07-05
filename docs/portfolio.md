@@ -8,6 +8,10 @@ This portfolio is organized around two connected but different directions:
 The public repositories show reusable methods, contracts, and tools; private
 repositories hold sensitive research state and real results.
 
+Documentation authority and public/private storage rules are defined in
+[`documentation-contract.md`](documentation-contract.md). This page is the
+portfolio map; it should not redefine repository-local source-of-truth rules.
+
 ## Core Thesis
 
 AI-assisted engineering should produce reviewable systems:
@@ -134,3 +138,7 @@ Private:
 
 This split is intentional. The public work shows process quality; the private
 work holds sensitive research state.
+
+For the exact rule on what belongs in public Git, private repositories, local
+runtime state, and archive/history docs, use
+[`documentation-contract.md`](documentation-contract.md).

@@ -46,6 +46,11 @@ move from AI-assisted research and paper validation toward controlled automation
 | AI-assisted trading system | [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2), [honest-backtest](https://github.com/krivonosoff161/honest-backtest) | News/event scanner, strategy lab, validator/backtest discipline, paper-only gates, and a controlled path toward automation. |
 | LLM operations | [llm-router](https://github.com/krivonosoff161/llm-router), [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter) | Cost-aware routing, cheap-to-chief filtering, provider-neutral calls, and controlled LLM spend. |
 
+The documentation hierarchy and public/private boundaries are defined in the
+[Documentation Contract](docs/documentation-contract.md). That contract is the
+portfolio-level source of truth for which documents are current, which are
+repo-local, and which are archive/history.
+
 ## Flagship: Agentic Security Harness
 
 [Agentic Security Harness](https://github.com/krivonosoff161/agentic-security-harness)
@@ -154,6 +159,7 @@ Private:
 - Transfer verification: [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier)
 - LLM routing: [llm-router](https://github.com/krivonosoff161/llm-router)
 - LLM triage: [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter)
+- Documentation contract: [docs/documentation-contract.md](docs/documentation-contract.md)
 - Portfolio map: [docs/portfolio.md](docs/portfolio.md)
 - Execution map: [docs/execution-map.md](docs/execution-map.md)
 

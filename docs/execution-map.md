@@ -12,6 +12,12 @@ different directions:
 2. AI-assisted trading systems with validation discipline and a
    paper-to-automation path.
 
+The documentation hierarchy is defined in
+[`documentation-contract.md`](documentation-contract.md). This execution map
+answers "which repo owns which layer and what order should work follow"; the
+documentation contract answers "which documents are authoritative and what must
+stay private."
+
 ## Portfolio Layers
 
 | Layer | Repository | Role | Public claim |
@@ -43,6 +49,10 @@ Private:
 - raw private logs;
 - API keys, credentials, and provider bills;
 - operational dashboards and live research state.
+
+The full documentation and storage rule is in
+[`documentation-contract.md`](documentation-contract.md). Repository-local
+storage boundary documents may narrow the rule, but they should not weaken it.
 
 ## Execution Order
 
