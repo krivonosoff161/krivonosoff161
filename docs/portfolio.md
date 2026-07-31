@@ -36,6 +36,8 @@ Repositories:
 - [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness)
 - [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier)
 - [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
+- `agentic-runtime-guard` — private product-research composition root; intentionally not
+  linked as a public repository.
 
 Role:
 
@@ -45,6 +47,7 @@ Role:
 - trace, scorecard, matrix, diff, report, and remediation artifacts;
 - external model/runtime checks through explicit OpenAI-compatible endpoints.
 - practical handoff files and provenance/authority transfer checks.
+- private shadow/advisory Runtime Guard composition with no production authority.
 
 Why it matters:
 

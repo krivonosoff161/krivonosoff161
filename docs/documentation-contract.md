@@ -58,6 +58,7 @@ Every active repository should fit this shape.
 | Repository | Portfolio role | Documentation source of truth |
 |---|---|---|
 | `agentic-security-harness` | Security flagship and benchmark/evidence layer | README, current state, project map, research problem map, evidence boundary |
+| `agentic-runtime-guard` (private) | Product-composition and shadow/advisory runtime research | Russian README, architecture, threat model, evidence contract, product roadmap, portfolio map |
 | `agentic-transfer-verifier` | Trust/provenance transfer research | README, formal/risk/leakage model docs |
 | `ai-agent-handoff` | Practical handoff protocol and local guard | README, protocol, trust-boundaries, project map |
 | `llm-safety-playbooks` | Lightweight practical safety playbooks | README, coverage map, playbooks |

@@ -23,6 +23,7 @@ stay private."
 | Layer | Repository | Role | Public claim |
 |---|---|---|---|
 | Agentic security core | `agentic-security-harness` | Flagship defensive benchmark | Deterministic evaluation of agentic AI boundary failures |
+| Runtime protection research | `agentic-runtime-guard` (private) | Product-composition root and authority-free shadow research | No public runtime or production-protection claim |
 | Transfer verification | `agentic-transfer-verifier` | Trust/provenance research line | Validate data, context, provenance, and authority across agent runtimes |
 | Agent workflow | `ai-agent-handoff` | Practical protocol + guard | Durable handoff files and simple guardrails for AI coding agents |
 | LLM safety playbooks | `llm-safety-playbooks` | Lightweight practical skills | Help users make LLM boundaries explicit without running the full benchmark |
