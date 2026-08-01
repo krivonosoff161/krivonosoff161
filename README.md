@@ -5,9 +5,9 @@ I build AI-assisted systems in two connected directions:
 1. **Agentic AI security tooling** - benchmarks, handoff checks, and safety
    workflows for agents that read files, tools, memory, model output, and other
    agents.
-2. **AI-assisted trading systems** - a trading research stack where LLM output
-   is treated as a proposal, then challenged by validators, backtests, paper
-   runs, and review gates before it can move toward automation.
+2. **AI-assisted trading systems** - a trading research and paper-observation
+   stack where LLM output is treated as a proposal, then challenged by
+   validators, backtests, evidence gates, and owner review.
 
 The common rule is simple:
 
@@ -34,8 +34,9 @@ scorecards, and remediation output.
 
 The trading stack is a separate applied direction, not a security side project:
 [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2) and
-[honest-backtest](https://github.com/krivonosoff161/honest-backtest) are used to
-move from AI-assisted research and paper validation toward controlled automation.
+[honest-backtest](https://github.com/krivonosoff161/honest-backtest) implement a
+public research and paper-validation discipline. Live execution is outside the
+supported portfolio and would require a separate architecture and owner decision.
 
 ## Portfolio Structure
 
@@ -158,17 +159,28 @@ Private:
 
 ## Start Here
 
-- Security benchmark: [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness)
-- Trading research workbench: [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2)
-- Trading validator: [honest-backtest](https://github.com/krivonosoff161/honest-backtest)
-- Agent handoff protocol: [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
+- [Current portfolio state](docs/current-portfolio-state.md)
+- [Security Portfolio](docs/security-portfolio.md)
+- [Trading Portfolio](docs/trading-portfolio.md)
+- [Repository catalog and roles](docs/portfolio.md)
+
+These four pages lead to current state, architecture, roadmap, evidence, the next
+gate, and authority boundaries in no more than two transitions. Governance and
+document precedence are defined in the
+[Portfolio Governance](docs/portfolio-governance.md) and
+[Documentation Contract](docs/documentation-contract.md).
+
+## Repositories
+
+- Security product roadmap: [agentic-runtime-guard](https://github.com/krivonosoff161/agentic-runtime-guard)
+- Security benchmark/evidence: [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness)
 - Transfer verification: [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier)
+- Agent handoff protocol: [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
+- Safety guidance: [llm-safety-playbooks](https://github.com/krivonosoff161/llm-safety-playbooks)
+- Trading research and paper system: [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2)
+- Skeptical Trading validator: [honest-backtest](https://github.com/krivonosoff161/honest-backtest)
 - LLM routing: [llm-router](https://github.com/krivonosoff161/llm-router)
 - LLM triage: [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter)
-- Documentation contract: [docs/documentation-contract.md](docs/documentation-contract.md)
-- Portfolio map: [docs/portfolio.md](docs/portfolio.md)
-- Execution map: [docs/execution-map.md](docs/execution-map.md)
-- Security Portfolio roadmap: [docs/security-portfolio-roadmap-public.md](docs/security-portfolio-roadmap-public.md)
 
 ## Active Boards
 

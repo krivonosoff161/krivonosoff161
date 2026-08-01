@@ -1,4 +1,4 @@
-name: Security Portfolio roadmap
+name: Portfolio documentation governance
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  validate-public-projection:
+  validate-portfolio:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -17,3 +17,5 @@ jobs:
         with:
           python-version: "3.13"
       - run: python tools/validate_security_portfolio_projection.py
+      - run: python tools/validate_portfolio_governance.py
+      - run: python -m unittest discover -s tests -p "test_*.py" -v

@@ -1,7 +1,7 @@
 # Documentation Contract
 
 Status: active portfolio contract
-Last updated: 2026-07-31
+Last updated: 2026-08-01
 
 This document defines how the repositories in this GitHub profile should be
 read, updated, and connected. It exists to prevent the portfolio from becoming a
@@ -30,16 +30,20 @@ document explicitly narrows it.
 | Document | Authority |
 |---|---|
 | [`README.md`](../README.md) | Public front door. Explains who I am, what the portfolio is, and where to start. |
+| [`docs/current-portfolio-state.md`](current-portfolio-state.md) | Concise factual state and next owner-gated evidence step for Security and Trading. |
+| [`docs/portfolio-governance.yaml`](portfolio-governance.yaml) | Machine-readable ownership, precedence, projection, digest, and owner-gate contract. |
+| [`docs/portfolio-governance.md`](portfolio-governance.md) | Human view of the machine governance contract. |
 | [`docs/execution-map.md`](execution-map.md) | Portfolio ownership map. Explains which repo owns which layer and what order work should follow. |
 | `docs/documentation-contract.md` | Documentation governance. Explains which documents are canonical, which are local, and which are archive/history. |
 | [`docs/security-portfolio-roadmap-public.md`](security-portfolio-roadmap-public.md) | Generated public, sanitized projection of the private Security Portfolio product roadmap. |
 
-This profile is the public source of truth for portfolio navigation and the
-sanitized security-roadmap projection. The private `agentic-runtime-guard`
-repository is the sole canonical source for the Security Portfolio product and
-execution roadmap. Individual repositories own only their declared module detail;
-they must not independently promote portfolio status, evidence, authority, or
-release claims.
+This profile owns public navigation and integration pins only. The private
+`agentic-runtime-guard` repository is the sole canonical source for the Security
+product/execution roadmap; `agentic-security-harness` owns the public Security
+research/evidence projection. `trading-bot-v2` owns Trading Portfolio truth and
+`honest-backtest` owns its skeptical validation module. Individual repositories
+own only their declared detail and cannot independently promote portfolio status,
+evidence, authority, or release claims.
 
 ## Repository Document Roles
 
@@ -122,9 +126,9 @@ Only the first layer belongs in public repositories.
 
 `trading-bot-v2` may explain the workbench, paper/research boundaries, and
 validated process. `honest-backtest` may explain validation methods on synthetic
-data. `trading-bot-research` may hold private research code and findings when
-they are safe for that private repository. Raw runtime state and large generated
-artifacts stay outside Git.
+data. The profile consumes only the sanitized machine projection and separately
+pins merged SHAs and its canonical UTF-8-LF digest. Raw runtime state, private
+research findings, and large generated artifacts stay outside public Git.
 
 ## Security Research Rule
 

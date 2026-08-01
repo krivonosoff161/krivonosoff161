@@ -13,8 +13,8 @@ Trading research is easy to fool:
 
 ## System Direction
 
-The private trading system is built as research infrastructure, not as a public
-signal product.
+The public Trading codebase is built as research infrastructure, not as a signal
+product. Real results, parameters, and runtime state remain private.
 
 Main components:
 
