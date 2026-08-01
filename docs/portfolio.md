@@ -11,6 +11,9 @@ repositories hold sensitive research state and real results.
 Documentation authority and public/private storage rules are defined in
 [`documentation-contract.md`](documentation-contract.md). This page is the
 portfolio map; it should not redefine repository-local source-of-truth rules.
+The current Security Portfolio phases, module owners, dependencies, exit criteria,
+non-claims, and owner gates are published in the generated
+[`security-portfolio-roadmap-public.md`](security-portfolio-roadmap-public.md).
 
 ## Core Thesis
 
@@ -48,6 +51,10 @@ Role:
 - external model/runtime checks through explicit OpenAI-compatible endpoints.
 - practical handoff files and provenance/authority transfer checks.
 - private shadow/advisory Runtime Guard composition with no production authority.
+
+The private Runtime Guard repository owns the canonical product roadmap. This
+profile publishes only an allowlisted projection; public component repositories
+own their modules but cannot promote the overall product state.
 
 Why it matters:
 

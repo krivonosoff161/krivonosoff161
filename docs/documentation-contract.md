@@ -1,7 +1,7 @@
 # Documentation Contract
 
 Status: active portfolio contract
-Last updated: 2026-07-05
+Last updated: 2026-07-31
 
 This document defines how the repositories in this GitHub profile should be
 read, updated, and connected. It exists to prevent the portfolio from becoming a
@@ -32,10 +32,14 @@ document explicitly narrows it.
 | [`README.md`](../README.md) | Public front door. Explains who I am, what the portfolio is, and where to start. |
 | [`docs/execution-map.md`](execution-map.md) | Portfolio ownership map. Explains which repo owns which layer and what order work should follow. |
 | `docs/documentation-contract.md` | Documentation governance. Explains which documents are canonical, which are local, and which are archive/history. |
+| [`docs/security-portfolio-roadmap-public.md`](security-portfolio-roadmap-public.md) | Generated public, sanitized projection of the private Security Portfolio product roadmap. |
 
-The profile repository is the only place that should define the whole GitHub
-portfolio. Individual repos may explain their role, but they should not redefine
-the whole system differently.
+This profile is the public source of truth for portfolio navigation and the
+sanitized security-roadmap projection. The private `agentic-runtime-guard`
+repository is the sole canonical source for the Security Portfolio product and
+execution roadmap. Individual repositories own only their declared module detail;
+they must not independently promote portfolio status, evidence, authority, or
+release claims.
 
 ## Repository Document Roles
 
@@ -152,6 +156,9 @@ When changing documentation:
 5. Keep public claims conservative: no profitability, no complete protection,
    no certification, no provider endorsement, no live-trading implication.
 6. Re-run a link/private-boundary audit after broad documentation changes.
+7. For Security Portfolio status, update the private machine-readable source and
+   regenerate this repository's public projection; do not hand-edit the generated
+   roadmap files.
 
 ## Review Checklist
 
@@ -167,6 +174,8 @@ Before accepting a broad documentation change, check:
 - Do cross-repo links point to the profile contract instead of re-explaining the
   entire portfolio differently?
 - Do all non-claims remain intact?
+- Does the public Security Portfolio projection pass its structural, non-leak,
+  dependency, and digest checks?
 
 ## Intended Outcome
 

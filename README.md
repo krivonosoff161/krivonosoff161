@@ -51,6 +51,12 @@ The documentation hierarchy and public/private boundaries are defined in the
 portfolio-level source of truth for which documents are current, which are
 repo-local, and which are archive/history.
 
+The security line now has a generated
+[public Security Portfolio Roadmap](docs/security-portfolio-roadmap-public.md)
+with explicit module owners, dependencies, evidence ceilings, phase exit criteria,
+residual risks, and owner gates. Its private canonical source remains in Runtime
+Guard; the projection grants no operational authority.
+
 ## Flagship: Agentic Security Harness
 
 [Agentic Security Harness](https://github.com/krivonosoff161/agentic-security-harness)
@@ -162,6 +168,7 @@ Private:
 - Documentation contract: [docs/documentation-contract.md](docs/documentation-contract.md)
 - Portfolio map: [docs/portfolio.md](docs/portfolio.md)
 - Execution map: [docs/execution-map.md](docs/execution-map.md)
+- Security Portfolio roadmap: [docs/security-portfolio-roadmap-public.md](docs/security-portfolio-roadmap-public.md)
 
 ## Active Boards
 
