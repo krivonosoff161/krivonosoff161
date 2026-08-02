@@ -22,7 +22,7 @@ failure modes.
 The current public version includes:
 
 - deterministic local targets;
-- a 22-pattern seed corpus;
+- a 24-pattern deterministic seed corpus;
 - vulnerable vs protected replay;
 - scenario matrices;
 - external OpenAI-compatible model/runtime checks;

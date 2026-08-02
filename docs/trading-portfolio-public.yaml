@@ -1,0 +1,33 @@
+{
+  "schema_version": "TradingPortfolioPublicProjection.v1",
+  "projection_version": "2026.08.01-v1",
+  "verified_date": "2026-08-01",
+  "source_owner": "trading-bot-v2",
+  "skeptical_validator": "honest-backtest",
+  "portfolio_integrator": "krivonosoff161",
+  "source_manifest_sha256": "de9567921c2df7326f365aa16ad8add50c809c05323c171914a9b3f24d90b52e",
+  "hash_canonicalization": "utf8_lf",
+  "merged_main": {
+    "trading-bot-v2": "46496475078ab11355445687ad29321cdd5edd94",
+    "honest-backtest": "a23588c8696989cba0e0283454cfd175a9ab1e03"
+  },
+  "status": "current",
+  "authority": "none",
+  "capability_summary": [
+    {"id": "research_and_simulation", "owner": "trading-bot-v2", "status": "implemented_bounded", "authority": "none"},
+    {"id": "skeptical_validation", "owner": "honest-backtest", "status": "implemented_bounded", "authority": "none"},
+    {"id": "paper_observation", "owner": "trading-bot-v2", "status": "implemented_bounded", "authority": "paper_only"},
+    {"id": "research_control_center", "owner": "trading-bot-v2", "status": "implemented_bounded", "authority": "separately_owner_gated"},
+    {"id": "llm_advisory", "owner": "trading-bot-v2", "status": "implemented_bounded", "authority": "advisory"},
+    {"id": "live_execution", "owner": "trading-bot-v2", "status": "owner_gated", "authority": "separately_owner_gated"}
+  ],
+  "next_gate": "complete_the_separately_authorized_48_hour_paper_only_canary",
+  "non_claims": [
+    "profitability",
+    "signal_quality",
+    "continuous_runtime_health",
+    "live_readiness",
+    "provider_availability",
+    "order_authority"
+  ]
+}

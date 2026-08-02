@@ -1,154 +1,43 @@
-# Portfolio Map
+# Repository Catalog and Roles
 
-This portfolio is organized around two connected but different directions:
+Status: **CURRENT**
 
-1. Agentic AI security tooling.
-2. AI-assisted trading systems with validator/backtest discipline.
+Verified: 2026-08-01
 
-The public repositories show reusable methods, contracts, and tools; private
-repositories hold sensitive research state and real results.
+This is a catalog, not a second product roadmap. Current state is in
+[`current-portfolio-state.md`](current-portfolio-state.md), and ownership rules
+are in [`portfolio-governance.md`](portfolio-governance.md).
 
-Documentation authority and public/private storage rules are defined in
-[`documentation-contract.md`](documentation-contract.md). This page is the
-portfolio map; it should not redefine repository-local source-of-truth rules.
-The current Security Portfolio phases, module owners, dependencies, exit criteria,
-non-claims, and owner gates are published in the generated
-[`security-portfolio-roadmap-public.md`](security-portfolio-roadmap-public.md).
+## Security Portfolio
 
-## Core Thesis
+| Repository | Owned role | Authority ceiling |
+|---|---|---|
+| [agentic-runtime-guard](https://github.com/krivonosoff161/agentic-runtime-guard) | Canonical Security product roadmap and bounded shadow/runtime research | No production or operational authority |
+| [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness) | Public defensive benchmark, synthetic regression, and evidence projection | No certification or enforcement |
+| [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier) | Transfer provenance, freshness, capability, and authority checks | Advisory module only |
+| [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff) | Practical file handoff protocol and pattern guard | Guard, not sandbox or verifier |
+| [llm-safety-playbooks](https://github.com/krivonosoff161/llm-safety-playbooks) | Human operating guidance | Guidance, not enforcement |
 
-AI-assisted engineering should produce reviewable systems:
+## Trading Portfolio
 
-```text
-bounded problem -> reproducible run -> machine-readable artifact -> review -> next test
-```
+| Repository | Owned role | Authority ceiling |
+|---|---|---|
+| [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2) | Canonical public-safe Trading roadmap, research orchestration, deterministic simulation, and paper observation | Paper-only contours require separate owner authority; no live execution |
+| [honest-backtest](https://github.com/krivonosoff161/honest-backtest) | Skeptical deterministic validation | A pass means only "not rejected" |
 
-The same discipline appears in both active directions:
+## Shared support
 
-- agentic AI systems need measurable safety, provenance, and handoff
-  boundaries;
-- AI-assisted trading needs validators, backtests, paper runs, and review gates
-  before a model-generated setup becomes a decision.
+| Repository | Owned role | Authority ceiling |
+|---|---|---|
+| [llm-router](https://github.com/krivonosoff161/llm-router) | Provider-neutral routing and usage/cost arithmetic | Not a policy gateway or secret manager |
+| [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter) | Deterministic and cheap-to-chief triage | Cannot lower a guard decision or establish correctness |
+| [krivonosoff161](https://github.com/krivonosoff161/krivonosoff161) | Public navigation and sanitized integration | Projection only; owns no upstream product claim |
 
-## Project Groups
+## Reading order
 
-### 1. Agentic AI Security
-
-Repositories:
-
-- [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness)
-- [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier)
-- [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
-- `agentic-runtime-guard` — private product-research composition root; intentionally not
-  linked as a public repository.
-
-Role:
-
-- flagship public project;
-- defensive benchmark toolkit;
-- deterministic local targets;
-- trace, scorecard, matrix, diff, report, and remediation artifacts;
-- external model/runtime checks through explicit OpenAI-compatible endpoints.
-- practical handoff files and provenance/authority transfer checks.
-- private shadow/advisory Runtime Guard composition with no production authority.
-
-The private Runtime Guard repository owns the canonical product roadmap. This
-profile publishes only an allowlisted projection; public component repositories
-own their modules but cannot promote the overall product state.
-
-Why it matters:
-
-Agentic systems move data between tools, memory, providers, files, users, and
-other agents. A system prompt is not a security boundary. This project turns
-those risks into safe, reproducible defensive checks.
-
-### 2. LLM Safety Playbooks
-
-Repository:
-
-- [llm-safety-playbooks](https://github.com/krivonosoff161/llm-safety-playbooks)
-
-Role:
-
-- short practical skills for everyday LLM use;
-- prompt/workflow guidance that makes boundaries explicit;
-- data-vs-instruction, secret handling, generated-resource verification,
-  Git/PR safety, handoff verification, and safe research scope.
-
-Why it matters:
-
-Not every user needs to run a benchmark. Some need a small set of repeatable
-skills that reduce ambiguity before a model or coding agent acts.
-
-### 3. AI-Assisted Trading System
-
-Repositories:
-
-- [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2)
-- [honest-backtest](https://github.com/krivonosoff161/honest-backtest)
-- private trading research workspace
-
-Role:
-
-- news scanner and market-context pipeline;
-- strategy research lab;
-- validator/backtest discipline for AI-generated setup ideas;
-- private candidate registry;
-- data preparation and outcome tracking;
-- paper-only validation boundaries;
-- future automation behind explicit gates.
-
-Why it matters:
-
-Trading research fails when noisy events, overfit parameters, and narrative
-confidence are treated as evidence. In this line, LLM output is a proposal. The
-validator/backtest layer tries to kill weak setups before they reach paper
-tracking or automation.
-
-### 4. LLM Operations
-
-Repositories:
-
-- [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter)
-- [llm-router](https://github.com/krivonosoff161/llm-router)
-
-Role:
-
-- cost-aware model routing;
-- cheap-to-chief escalation;
-- provider-neutral calls;
-- usage and cost logging.
-
-Why it matters:
-
-In agentic systems, expensive models should be used for the decisions that
-actually need them. Cheap deterministic filters and role-tiered routing keep
-costs visible.
-
-## Public vs Private Boundary
-
-Public:
-
-- methods;
-- harnesses;
-- examples;
-- tests;
-- schemas;
-- documentation;
-- sanitized reports.
-
-Private:
-
-- trading results;
-- live parameters;
-- credentials;
-- raw private logs;
-- candidate strategy rankings;
-- operational dashboards.
-
-This split is intentional. The public work shows process quality; the private
-work holds sensitive research state.
-
-For the exact rule on what belongs in public Git, private repositories, local
-runtime state, and archive/history docs, use
-[`documentation-contract.md`](documentation-contract.md).
+- [Current portfolio state](current-portfolio-state.md)
+- [Security Portfolio](security-portfolio.md)
+- [Trading Portfolio](trading-portfolio.md)
+- [Execution map](execution-map.md)
+- [Portfolio Governance](portfolio-governance.md)
+- [Documentation Contract](documentation-contract.md)

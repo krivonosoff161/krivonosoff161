@@ -1,0 +1,73 @@
+{
+  "schema_version": "AIPortfolioGovernance.v1",
+  "governance_version": "2026.08.01-v1",
+  "verified_date": "2026-08-01",
+  "authority": "none",
+  "portfolio_integrator": "krivonosoff161",
+  "instruction_precedence": [
+    "owner_action_specific_instruction",
+    "global_agent_and_git_contracts",
+    "nearest_repository_agents_contract",
+    "machine_readable_portfolio_manifest",
+    "repository_current_documents",
+    "history_and_continuity_evidence"
+  ],
+  "lower_level_rule": "narrow_only",
+  "document_roles": {
+    "public_front_door": "README.md",
+    "current_portfolio_state": "docs/current-portfolio-state.md",
+    "portfolio_governance": "docs/portfolio-governance.yaml",
+    "repository_catalog": "docs/portfolio.md",
+    "security_projection": "docs/security-portfolio-roadmap-public.yaml",
+    "trading_projection": "docs/trading-portfolio-public.yaml"
+  },
+  "repository_owners": [
+    {"id": "agentic-runtime-guard", "role": "security_product_roadmap", "authority": "canonical_private"},
+    {"id": "agentic-security-harness", "role": "security_public_research_evidence", "authority": "owned_public_projection"},
+    {"id": "trading-bot-v2", "role": "trading_portfolio", "authority": "canonical_public_safe"},
+    {"id": "honest-backtest", "role": "skeptical_trading_validation", "authority": "owned_module_projection"},
+    {"id": "krivonosoff161", "role": "portfolio_navigation_integration", "authority": "projection_only"},
+    {"id": "agentic-transfer-verifier", "role": "transfer_verification_module", "authority": "owned_module_only"},
+    {"id": "ai-agent-handoff", "role": "handoff_protocol_module", "authority": "owned_module_only"},
+    {"id": "llm-router", "role": "provider_cost_adapter", "authority": "owned_module_only"},
+    {"id": "llm-cheap-filter", "role": "cost_triage_adapter", "authority": "owned_module_only"},
+    {"id": "llm-safety-playbooks", "role": "operator_guidance", "authority": "owned_module_only"}
+  ],
+  "source_pins": {
+    "security": {
+      "runtime_guard_main": "3ce70939556ca10ef7cc8f600fe3e716cfe7b0ab",
+      "harness_main": "f967b904ad823f4d2307a3a2cd1b413c069542e8",
+      "canonical_manifest_sha256": "181a0dd7fad62699693895b1bd5189c91984140a48a35afe811d948efee57fca",
+      "public_projection_sha256": "d960d5a710c152c28ad9837ebd665a476d0fc99562076ff6f1c5f24e73dd0bd6"
+    },
+    "trading": {
+      "trading_main": "46496475078ab11355445687ad29321cdd5edd94",
+      "honest_backtest_main": "a23588c8696989cba0e0283454cfd175a9ab1e03",
+      "canonical_manifest_sha256": "de9567921c2df7326f365aa16ad8add50c809c05323c171914a9b3f24d90b52e",
+      "hash_canonicalization": "utf8_lf"
+    }
+  },
+  "status_values": ["current", "implemented", "implemented_bounded", "partial", "planned", "owner_gated", "historical", "superseded"],
+  "authority_values": ["none", "advisory", "paper_only", "projection_only", "owned_module_only", "separately_owner_gated"],
+  "projection_rules": [
+    "source_owner_remains_authoritative",
+    "profile_never_promotes_status_or_claims",
+    "merge_sha_and_manifest_digest_are_separate_pins",
+    "utf8_lf_digest_is_checkout_independent",
+    "historical_documents_never_override_current_documents",
+    "completed_requires_evidence",
+    "raw_private_or_runtime_material_is_forbidden"
+  ],
+  "owner_gates": [
+    "merge",
+    "release_or_tag",
+    "deployment",
+    "enforcement_activation",
+    "provider_or_live_endpoint_use",
+    "real_device_use",
+    "private_or_personal_data_use",
+    "sealed_holdout_execution",
+    "repository_visibility_or_license_change",
+    "trading_execution"
+  ]
+}
