@@ -27,10 +27,11 @@ evidence that other people can inspect.
 
 My main public security project is
 [Agentic Security Harness](https://github.com/krivonosoff161/agentic-security-harness):
-a defensive benchmark for testing whether AI coding agents treat untrusted repo text as
-data instead of authority. The included local demo compares a vulnerable synthetic agent
-against a protected version across 24 boundary-failure patterns and records traces,
-scorecards, and remediation output.
+a released Python toolkit and defensive benchmark for agent boundary failures. Version
+1.1.0 ships a stable 24-pattern corpus, local vulnerable/protected comparisons, portable
+traces and reports, and a provider-neutral Agent Host workflow for offline owned fixtures.
+The active public product track is adding a local Runtime Gateway, provider-envelope
+normalization, structured non-executable approval requests, and hardened container smoke.
 
 The trading stack is a separate applied direction, not a security side project:
 [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2) and
@@ -70,11 +71,19 @@ It is a defensive benchmark toolkit for measuring agentic AI failure modes with:
 - scenario matrices and run diffs;
 - OpenAI-compatible external model/runtime checks;
 - remediation guidance;
-- schema validation and local report generation.
+- schema validation and local report generation;
+- a stable `pip install agentic-security-harness` package and Linux-first quickstart;
+- a provider-neutral Agent Host V1 offline workflow with canonical recordings;
+- active review-only Runtime Gateway work for local policy-before-tool-dispatch.
 
 It is not a hacking toolkit and not a promise of complete protection. It is a
 measurement and learning lab for authorized, synthetic, local, or explicitly
 owned targets.
+
+The Runtime Gateway work is intentionally visible as a review stack rather than presented
+as already released. It uses synthetic tools and credential-free fixtures; live provider
+credentials, arbitrary tool execution, deployment, and production enforcement are not
+current public capabilities.
 
 ## Trading Research Stack
 
@@ -172,7 +181,6 @@ document precedence are defined in the
 
 ## Repositories
 
-- Security product roadmap: [agentic-runtime-guard](https://github.com/krivonosoff161/agentic-runtime-guard)
 - Security benchmark/evidence: [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness)
 - Transfer verification: [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier)
 - Agent handoff protocol: [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
