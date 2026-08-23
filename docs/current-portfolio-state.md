@@ -1,22 +1,23 @@
 # Current AI Portfolio State
 
 Status: **CURRENT**
-Verified: 2026-08-01
-Implementation baseline: Security mains `3ce7093` / `f967b90`; Trading mains
-`4649647` / `a23588c`.
+Verified: 2026-08-23
+Security public roadmap contract baseline: Harness `28865fc`; Trading baseline remains
+`4649647` / `a23588c` pending its own documentation cycle.
 
 ## Security
 
-The federated Security Portfolio has a canonical product/execution roadmap in
-`agentic-runtime-guard` and a public research/evidence projection in
-`agentic-security-harness`. The current product is shadow/advisory research with
-bounded deterministic components; it is not production protection or certification.
+The federated Security ecosystem has one public machine-readable roadmap in
+`agentic-security-harness`. Released Harness is the public core; the other public
+repositories are currently standalone or contract-only components, not yet installable
+Harness extensions. Private Runtime Guard is a research upstream and is not required by the
+public installation.
 
-Current gate: complete contract convergence and a no-effect shadow product slice
-before any scientific promotion, real-device study, or enforcement work.
+Current gate: complete documentation convergence, then implement the Extension SDK and
+cross-repository compatibility contracts before claiming installable extensions.
 
 - [Security Portfolio entry](security-portfolio.md)
-- [Generated public roadmap](security-portfolio-roadmap-public.md)
+- [Public ecosystem roadmap](https://github.com/krivonosoff161/agentic-security-harness/blob/main/docs/ecosystem-roadmap.md)
 
 ## Trading
 

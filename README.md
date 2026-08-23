@@ -28,10 +28,10 @@ evidence that other people can inspect.
 My main public security project is
 [Agentic Security Harness](https://github.com/krivonosoff161/agentic-security-harness):
 a released Python toolkit and defensive benchmark for agent boundary failures. Version
-1.1.0 ships a stable 24-pattern corpus, local vulnerable/protected comparisons, portable
-traces and reports, and a provider-neutral Agent Host workflow for offline owned fixtures.
-The active public product track is adding a local Runtime Gateway, provider-envelope
-normalization, structured non-executable approval requests, and hardened container smoke.
+1.2.0 ships a stable 24-pattern corpus, local vulnerable/protected comparisons, portable
+traces and reports, a provider-neutral Agent Host workflow for offline owned fixtures, and
+a local Runtime Gateway reference contour with provider-envelope normalization, structured
+non-executable approval requests, audit evidence and hardened container smoke.
 
 The trading stack is a separate applied direction, not a security side project:
 [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2) and
@@ -53,11 +53,13 @@ The documentation hierarchy and public/private boundaries are defined in the
 portfolio-level source of truth for which documents are current, which are
 repo-local, and which are archive/history.
 
-The security line now has a generated
-[public Security Portfolio Roadmap](docs/security-portfolio-roadmap-public.md)
-with explicit module owners, dependencies, evidence ceilings, phase exit criteria,
-residual risks, and owner gates. Its private canonical source remains in Runtime
-Guard; the projection grants no operational authority.
+The security line now has one public machine-readable
+[ecosystem roadmap](https://github.com/krivonosoff161/agentic-security-harness/blob/main/ecosystem/roadmap.yaml)
+owned by Agentic Security Harness and a
+[generated human view](https://github.com/krivonosoff161/agentic-security-harness/blob/main/docs/ecosystem-roadmap.md).
+This profile is navigation only; its [component roadmap](docs/component-roadmap.md) explains
+the projection flow. The older local Security roadmap files are preserved as historical R4
+evidence and no longer own current product status.
 
 ## Flagship: Agentic Security Harness
 

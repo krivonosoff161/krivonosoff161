@@ -12,8 +12,8 @@ are in [`portfolio-governance.md`](portfolio-governance.md).
 
 | Repository | Owned role | Authority ceiling |
 |---|---|---|
-| [agentic-runtime-guard](https://github.com/krivonosoff161/agentic-runtime-guard) | Canonical Security product roadmap and bounded shadow/runtime research | No production or operational authority |
-| [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness) | Public defensive benchmark, synthetic regression, and evidence projection | No certification or enforcement |
+| `agentic-runtime-guard` (private) | Private defensive research upstream and bounded shadow/runtime research | No public roadmap, production or operational authority |
+| [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness) | Public ecosystem core, roadmap, defensive benchmark and synthetic integration laboratory | No certification or production enforcement |
 | [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier) | Transfer provenance, freshness, capability, and authority checks | Advisory module only |
 | [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff) | Practical file handoff protocol and pattern guard | Guard, not sandbox or verifier |
 | [llm-safety-playbooks](https://github.com/krivonosoff161/llm-safety-playbooks) | Human operating guidance | Guidance, not enforcement |

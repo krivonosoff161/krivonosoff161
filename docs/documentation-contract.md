@@ -35,12 +35,13 @@ document explicitly narrows it.
 | [`docs/portfolio-governance.md`](portfolio-governance.md) | Human view of the machine governance contract. |
 | [`docs/execution-map.md`](execution-map.md) | Portfolio ownership map. Explains which repo owns which layer and what order work should follow. |
 | `docs/documentation-contract.md` | Documentation governance. Explains which documents are canonical, which are local, and which are archive/history. |
-| [`docs/security-portfolio-roadmap-public.md`](security-portfolio-roadmap-public.md) | Generated public, sanitized projection of the private Security Portfolio product roadmap. |
+| [`docs/component-roadmap.md`](component-roadmap.md) | Profile projection contract pointing to the public Harness ecosystem roadmap. |
+| `docs/security-portfolio-roadmap-public.*` | Preserved historical R4 projection; never current roadmap authority. |
 
-This profile owns public navigation and integration pins only. The private
-`agentic-runtime-guard` repository is the sole canonical source for the Security
-product/execution roadmap; `agentic-security-harness` owns the public Security
-research/evidence projection. `trading-bot-v2` owns Trading Portfolio truth and
+This profile owns public navigation and integration pins only. Public Security ecosystem
+roadmap authority belongs to `agentic-security-harness`; private
+`agentic-runtime-guard` owns only its component and research evidence.
+`trading-bot-v2` owns Trading Portfolio truth and
 `honest-backtest` owns its skeptical validation module. Individual repositories
 own only their declared detail and cannot independently promote portfolio status,
 evidence, authority, or release claims.
@@ -160,9 +161,9 @@ When changing documentation:
 5. Keep public claims conservative: no profitability, no complete protection,
    no certification, no provider endorsement, no live-trading implication.
 6. Re-run a link/private-boundary audit after broad documentation changes.
-7. For Security Portfolio status, update the private machine-readable source and
-   regenerate this repository's public projection; do not hand-edit the generated
-   roadmap files.
+7. For Security ecosystem status, update the public machine-readable Harness roadmap or the
+   source-owned component manifest, then regenerate this profile projection. Do not hand-edit
+   historical roadmap files into a new current state.
 
 ## Review Checklist
 

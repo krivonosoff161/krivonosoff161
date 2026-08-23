@@ -13,9 +13,13 @@ GOVERNANCE = ROOT / "docs" / "portfolio-governance.yaml"
 SECURITY = ROOT / "docs" / "security-portfolio-roadmap-public.yaml"
 TRADING = ROOT / "docs" / "trading-portfolio-public.yaml"
 README = ROOT / "README.md"
+COMPONENT = ROOT / "component.yaml"
 
-EXPECTED_SECURITY_PROJECTION_SHA256 = (
+EXPECTED_LEGACY_SECURITY_PROJECTION_SHA256 = (
     "d960d5a710c152c28ad9837ebd665a476d0fc99562076ff6f1c5f24e73dd0bd6"
+)
+EXPECTED_ECOSYSTEM_ROADMAP_SHA256 = (
+    "4e6d7167692583bf75fa1789a99693afe8df606fce06b7c2c0154a670159e4bf"
 )
 EXPECTED_TRADING_MANIFEST_SHA256 = (
     "de9567921c2df7326f365aa16ad8add50c809c05323c171914a9b3f24d90b52e"
@@ -72,9 +76,9 @@ def validate_governance(value: dict[str, Any]) -> None:
         raise GovernanceError("governance root shape drift")
     if value["schema_version"] != "AIPortfolioGovernance.v1":
         raise GovernanceError("unsupported governance schema")
-    if value["governance_version"] != "2026.08.01-v1":
+    if value["governance_version"] != "2026.08.23-v2":
         raise GovernanceError("unexpected governance version")
-    if value["verified_date"] != "2026-08-01" or value["authority"] != "none":
+    if value["verified_date"] != "2026-08-23" or value["authority"] != "none":
         raise GovernanceError("governance date or authority drift")
     if value["lower_level_rule"] != "narrow_only":
         raise GovernanceError("lower-level rules may only narrow governance")
@@ -85,8 +89,8 @@ def validate_governance(value: dict[str, Any]) -> None:
     if len(ids) != len(set(ids)) or len(roles) != len(set(roles)):
         raise GovernanceError("repository ids and owner roles must be unique")
     expected_roles = {
-        "security_product_roadmap": "agentic-runtime-guard",
-        "security_public_research_evidence": "agentic-security-harness",
+        "private_security_research_upstream": "agentic-runtime-guard",
+        "security_public_ecosystem_roadmap": "agentic-security-harness",
         "trading_portfolio": "trading-bot-v2",
         "skeptical_trading_validation": "honest-backtest",
         "portfolio_navigation_integration": "krivonosoff161",
@@ -99,22 +103,27 @@ def validate_governance(value: dict[str, Any]) -> None:
     security = pins["security"]
     trading = pins["trading"]
     for item in (
-        security["runtime_guard_main"],
-        security["harness_main"],
+        security["harness_baseline"],
         trading["trading_main"],
         trading["honest_backtest_main"],
     ):
         if not SHA_RE.fullmatch(item):
             raise GovernanceError("invalid merged-main pin")
     for item in (
-        security["canonical_manifest_sha256"],
-        security["public_projection_sha256"],
+        security["canonical_roadmap_sha256"],
+        security["legacy_projection_sha256"],
         trading["canonical_manifest_sha256"],
     ):
         if not SHA256_RE.fullmatch(item):
             raise GovernanceError("invalid manifest digest pin")
-    if security["public_projection_sha256"] != EXPECTED_SECURITY_PROJECTION_SHA256:
-        raise GovernanceError("Security projection digest pin drift")
+    if security["canonical_repository"] != (
+        "https://github.com/krivonosoff161/agentic-security-harness"
+    ) or security["canonical_roadmap_path"] != "ecosystem/roadmap.yaml":
+        raise GovernanceError("Security public roadmap owner drift")
+    if security["canonical_roadmap_sha256"] != EXPECTED_ECOSYSTEM_ROADMAP_SHA256:
+        raise GovernanceError("Security ecosystem roadmap digest pin drift")
+    if security["legacy_projection_sha256"] != EXPECTED_LEGACY_SECURITY_PROJECTION_SHA256:
+        raise GovernanceError("legacy Security projection digest pin drift")
     if trading["canonical_manifest_sha256"] != EXPECTED_TRADING_MANIFEST_SHA256:
         raise GovernanceError("Trading manifest digest pin drift")
     if trading["hash_canonicalization"] != "utf8_lf":
@@ -183,6 +192,28 @@ def validate_readme_navigation() -> None:
         raise GovernanceError("Start Here must contain exactly four ordered entry points")
     if "## Repositories" not in text:
         raise GovernanceError("README lacks separate repository catalog section")
+    if "agentic-security-harness/blob/main/ecosystem/roadmap.yaml" not in text:
+        raise GovernanceError("README does not point to the public Harness roadmap")
+
+
+def validate_component_manifest() -> None:
+    component = load_json(COMPONENT)
+    required = {
+        "schema_version", "component_id", "display_name", "repository", "visibility",
+        "kind", "summary", "package", "owns", "consumes", "contracts", "docs",
+        "compatibility", "integration_status", "evidence_refs", "claims", "non_claims",
+        "authority",
+    }
+    if set(component) != required:
+        raise GovernanceError("component manifest shape drift")
+    if component["schema_version"] != "AgenticSecurityEcosystemComponent.v1":
+        raise GovernanceError("unsupported component manifest schema")
+    if component["component_id"] != "krivonosoff161" or component["kind"] != "profile_projection":
+        raise GovernanceError("profile component identity drift")
+    if component["visibility"] != "public" or component["authority"] != "none":
+        raise GovernanceError("profile component visibility or authority drift")
+    if component["integration_status"] != "standalone":
+        raise GovernanceError("profile projection cannot claim suite integration")
 
 
 def validate_local_links() -> None:
@@ -210,7 +241,12 @@ def validate_public_hygiene() -> None:
         raise GovernanceError("environment file is present in the public tree")
     if any(name.endswith((".sqlite", ".sqlite3", ".db", ".log")) for name in tracked_names):
         raise GovernanceError("runtime database or log is present in the public tree")
-    for path in [ROOT / "AGENTS.md", ROOT / "README.md", *sorted((ROOT / "docs").rglob("*"))]:
+    for path in [
+        ROOT / "AGENTS.md",
+        ROOT / "README.md",
+        ROOT / "component.yaml",
+        *sorted((ROOT / "docs").rglob("*")),
+    ]:
         if not path.is_file() or path.suffix.lower() not in {".md", ".yaml", ".yml", ".json"}:
             continue
         text = path.read_text(encoding="utf-8")
@@ -224,12 +260,11 @@ def validate_all() -> None:
     governance = load_json(GOVERNANCE)
     validate_governance(governance)
     security = load_json(SECURITY)
-    if hashlib.sha256(SECURITY.read_bytes()).hexdigest() != EXPECTED_SECURITY_PROJECTION_SHA256:
-        raise GovernanceError("vendored Security projection bytes drift")
-    if security.get("source_sha256") != governance["source_pins"]["security"][
-        "canonical_manifest_sha256"
-    ]:
-        raise GovernanceError("Security canonical-manifest pin mismatch")
+    if hashlib.sha256(SECURITY.read_bytes()).hexdigest() != EXPECTED_LEGACY_SECURITY_PROJECTION_SHA256:
+        raise GovernanceError("preserved legacy Security projection bytes drift")
+    if security.get("authority") != "none":
+        raise GovernanceError("legacy Security projection grants authority")
+    validate_component_manifest()
     validate_trading_projection(load_json(TRADING), governance)
     validate_readme_navigation()
     validate_local_links()
