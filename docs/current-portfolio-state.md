@@ -1,8 +1,8 @@
 # Current AI Portfolio State
 
 Status: **CURRENT**
-Verified: 2026-08-23
-Security public roadmap contract baseline: Harness `28865fc`; Trading baseline remains
+Verified: 2026-08-26
+Security public roadmap contract baseline: Harness `5e82e80`; Trading baseline remains
 `4649647` / `a23588c` pending its own documentation cycle.
 
 ## Security

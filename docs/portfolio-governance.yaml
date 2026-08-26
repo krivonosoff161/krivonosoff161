@@ -1,7 +1,7 @@
 {
   "schema_version": "AIPortfolioGovernance.v1",
-  "governance_version": "2026.08.23-v2",
-  "verified_date": "2026-08-23",
+  "governance_version": "2026.08.26-v3",
+  "verified_date": "2026-08-26",
   "authority": "none",
   "portfolio_integrator": "krivonosoff161",
   "instruction_precedence": [
@@ -39,8 +39,8 @@
     "security": {
       "canonical_repository": "https://github.com/krivonosoff161/agentic-security-harness",
       "canonical_roadmap_path": "ecosystem/roadmap.yaml",
-      "harness_baseline": "28865fc4fef81574ee11e72b4a69f8bd37965e2e",
-      "canonical_roadmap_sha256": "4e6d7167692583bf75fa1789a99693afe8df606fce06b7c2c0154a670159e4bf",
+      "harness_baseline": "5e82e80c9cb96233d23e84e0318b374a6b8f6b01",
+      "canonical_roadmap_sha256": "1c5c72e88ec18dade8b0828610d29cafd629a8595a64073de825a75cdff1a8a7",
       "legacy_projection_sha256": "d960d5a710c152c28ad9837ebd665a476d0fc99562076ff6f1c5f24e73dd0bd6"
     },
     "trading": {
