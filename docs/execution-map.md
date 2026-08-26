@@ -2,10 +2,10 @@
 
 Status: **CURRENT**
 
-Last updated: 2026-08-01
+Last updated: 2026-08-23
 
-Implementation baseline: Security `3ce7093` / `f967b90`; Trading `4649647` /
-`a23588c`.
+Security public roadmap contract baseline: Harness `28865fc`. Trading remains on its existing
+`4649647` / `a23588c` baseline pending a separate documentation cycle.
 
 This page describes current cross-repository ownership and the next evidence
 order. The machine rules are in
@@ -14,27 +14,10 @@ roadmaps retain their own facts.
 
 ## Security path
 
-```text
-agentic-security-harness fixtures/evidence
-  -> canonical authority-free envelope
-  -> agentic-runtime-guard trust graph and deterministic policy
-  -> semantic/swarm advisories with abstention
-  -> no-effect shadow decision gateway
-  -> separately owner-gated receipts and bounded executor
-```
-
-Current phase: contract convergence. The immediate gate is a versioned canonical
-envelope with field-loss accounting, no-authority-promotion tests, and
-cross-repository shadow conformance. Semantic validation, real devices,
-enforcement, deployment, and release are later independent gates.
-
-Support ownership:
-
-- `agentic-transfer-verifier`: provenance/authority transfer checks;
-- `ai-agent-handoff`: file handoff protocol and edge pattern guard;
-- `llm-safety-playbooks`: human operating guidance;
-- `llm-router` and `llm-cheap-filter`: optional cost/provider support outside
-  the trusted decision core.
+The ordered Security phases, components and compatibility states are owned by the public
+[Harness ecosystem roadmap](https://github.com/krivonosoff161/agentic-security-harness/blob/main/ecosystem/roadmap.yaml).
+This profile does not duplicate that execution sequence. Its role is to link the generated
+human view and source-owned component documentation without promoting status.
 
 ## Trading path
 

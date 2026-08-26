@@ -1,0 +1,43 @@
+{
+  "schema_version": "AgenticSecurityEcosystemComponent.v1",
+  "component_id": "krivonosoff161",
+  "display_name": "krivonosoff161 public profile",
+  "repository": "https://github.com/krivonosoff161/krivonosoff161",
+  "visibility": "public",
+  "kind": "profile_projection",
+  "summary": "Public navigation and generated projection surface for the Agentic Security Harness ecosystem and the wider project portfolio.",
+  "package": {
+    "name": null,
+    "version": null,
+    "install": null,
+    "entry_points": []
+  },
+  "owns": {
+    "modules": ["public-profile-navigation"],
+    "checks": [],
+    "collectors": [],
+    "adapters": ["generated-public-profile-projection"],
+    "contracts": []
+  },
+  "consumes": ["Agentic Security Harness public ecosystem roadmap"],
+  "contracts": [
+    {"id": "ecosystem-roadmap", "version": "1", "direction": "consumes", "required": true}
+  ],
+  "docs": [
+    {"path": "README.md", "role": "component-front-door"},
+    {"path": "docs/component-roadmap.md", "role": "component-owned"},
+    {"path": "docs/current-portfolio-state.md", "role": "current-snapshot"},
+    {"path": "docs/security-portfolio-roadmap-public.yaml", "role": "historical"},
+    {"path": "docs/security-portfolio-roadmap-public.md", "role": "historical"}
+  ],
+  "compatibility": {
+    "harness_api": "not-applicable",
+    "python": "not-applicable",
+    "platforms": {"supported": ["web"], "tested": ["web"]}
+  },
+  "integration_status": "standalone",
+  "evidence_refs": ["docs/component-roadmap.md", "docs/portfolio-governance.yaml"],
+  "claims": ["public navigation surface", "projection-only ecosystem presentation"],
+  "non_claims": ["security product authority", "upstream status promotion", "extension execution", "operational authority"],
+  "authority": "none"
+}

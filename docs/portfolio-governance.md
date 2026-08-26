@@ -1,8 +1,8 @@
 # Portfolio Governance
 
 Status: **CURRENT**
-Governance version: `2026.08.01-v1`
-Verified: 2026-08-01
+Governance version: `2026.08.23-v2`
+Verified: 2026-08-23
 Authority: `none`
 
 The machine source is [`portfolio-governance.yaml`](portfolio-governance.yaml).
@@ -13,8 +13,8 @@ promote Security or Trading product claims.
 
 | Truth | Owner | Profile role |
 |---|---|---|
-| Security product roadmap | `agentic-runtime-guard` | Link and pin sanitized projection only |
-| Public Security research/evidence | `agentic-security-harness` | Link and pin merged public state |
+| Public Security ecosystem roadmap | `agentic-security-harness` | Link to the public machine contract and generated views |
+| Private Security research upstream | `agentic-runtime-guard` | Consume only sanitized component and research projections |
 | Trading Portfolio | `trading-bot-v2` | Consume sanitized machine projection only |
 | Skeptical Trading validation | `honest-backtest` | Preserve its bounded non-claim |
 | Public navigation | `krivonosoff161` | Integrate without redefining upstream facts |

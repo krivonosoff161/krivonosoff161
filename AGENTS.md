@@ -9,8 +9,9 @@ money, destructive-action, evidence, or owner-gate requirements.
 - Repository: `krivonosoff161/krivonosoff161`.
 - Role: public Portfolio Integrator and navigation surface.
 - It does not own Security or Trading product claims.
-- Security product truth belongs to `agentic-runtime-guard`; public Security
-  research/evidence truth belongs to `agentic-security-harness`; Trading truth
+- Public Security ecosystem roadmap and evidence truth belongs to
+  `agentic-security-harness`; private Runtime Guard owns only its component and
+  research evidence; Trading truth
   belongs to `trading-bot-v2`; skeptical Trading validation belongs to
   `honest-backtest`.
 
