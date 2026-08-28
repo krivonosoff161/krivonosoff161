@@ -28,10 +28,11 @@ evidence that other people can inspect.
 My main public security project is
 [Agentic Security Harness](https://github.com/krivonosoff161/agentic-security-harness):
 a released Python toolkit and defensive benchmark for agent boundary failures. Version
-1.2.0 ships a stable 24-pattern corpus, local vulnerable/protected comparisons, portable
-traces and reports, a provider-neutral Agent Host workflow for offline owned fixtures, and
-a local Runtime Gateway reference contour with provider-envelope normalization, structured
-non-executable approval requests, audit evidence and hardened container smoke.
+1.3.0 ships the stable 24-pattern corpus and the bounded v1.2 surfaces plus a closed
+Extension SDK, metadata-only distribution inspection and operator lifecycle, offline
+Security Intelligence contracts, receipt auditors, optional corpus-pack contracts and a
+controlled literal-loopback provider/tool-host contour. Companion repositories are still
+separately gated and are not bundled into the published core.
 
 The trading stack is a separate applied direction, not a security side project:
 [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2) and
@@ -82,10 +83,9 @@ It is not a hacking toolkit and not a promise of complete protection. It is a
 measurement and learning lab for authorized, synthetic, local, or explicitly
 owned targets.
 
-The Runtime Gateway work is intentionally visible as a review stack rather than presented
-as already released. It uses synthetic tools and credential-free fixtures; live provider
-credentials, arbitrary tool execution, deployment, and production enforcement are not
-current public capabilities.
+The bounded Runtime Gateway reference contour is published in v1.3.0. It uses synthetic
+tools and credential-free fixtures; live provider credentials, arbitrary tool execution,
+deployment, and production enforcement are not current public capabilities.
 
 ## Trading Research Stack
 

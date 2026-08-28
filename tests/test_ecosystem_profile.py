@@ -51,7 +51,7 @@ class EcosystemProfileTests(unittest.TestCase):
 
         self.assertEqual(
             security["harness_baseline"],
-            "5e82e80c9cb96233d23e84e0318b374a6b8f6b01",
+            "c1dd69856212458ae952e43aeb2b0cc9290e8205",
         )
         self.assertEqual(
             security["canonical_roadmap_sha256"],

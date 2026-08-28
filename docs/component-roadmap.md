@@ -32,7 +32,9 @@ ecosystem contract.
 
 ## Next documentation gates
 
-1. Generate the Security profile block from the merged Harness ecosystem contract.
-2. Reject profile drift, broken links and unknown component identifiers in CI.
-3. Keep Trading governance separate from the Security ecosystem migration.
-4. Keep profile updates projection-only and authority-free.
+1. Preserve the merged v1.3.0 status projection while the optional-extras stack is in review.
+2. After exact-head merges, repin the Harness merge SHA and regenerate install commands from
+   the merged package metadata rather than from review branches.
+3. Reject profile drift, broken links and unknown component identifiers in CI.
+4. Keep Trading governance separate from the Security ecosystem migration.
+5. Keep profile updates projection-only and authority-free.
