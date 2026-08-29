@@ -29,7 +29,7 @@ are in [`portfolio-governance.md`](portfolio-governance.md).
 
 | Repository | Integration status | Owned role | Authority ceiling |
 |---|---|---|---|
-| [llm-router](https://github.com/krivonosoff161/llm-router) | `standalone` | Provider-neutral routing and usage/cost arithmetic | Not a policy gateway or secret manager |
+| [llm-router](https://github.com/krivonosoff161/llm-router) | `contract_only` | Provider-neutral routing and usage/cost arithmetic | Not a policy gateway or secret manager |
 | [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter) | `standalone` | Deterministic and cheap-to-chief triage | Cannot lower a guard decision or establish correctness |
 | [krivonosoff161](https://github.com/krivonosoff161/krivonosoff161) | `standalone` | Public navigation and sanitized integration | Projection only; owns no upstream product claim |
 

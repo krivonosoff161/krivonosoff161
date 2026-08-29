@@ -51,11 +51,31 @@ class EcosystemProfileTests(unittest.TestCase):
 
         self.assertEqual(
             security["harness_baseline"],
-            "c1dd69856212458ae952e43aeb2b0cc9290e8205",
+            "1c4f0f0055e19eabf99e05e7dd88d393cc2c6eb1",
         )
         self.assertEqual(
             security["canonical_roadmap_sha256"],
-            "1c5c72e88ec18dade8b0828610d29cafd629a8595a64073de825a75cdff1a8a7",
+            "4e268b402b0f3dae960ba7b77e44361ee956b6656910abef52100078be64a672",
+        )
+
+    def test_installation_projection_preserves_release_and_activation_boundaries(self) -> None:
+        current = (ROOT / "docs" / "current-portfolio-state.md").read_text(
+            encoding="utf-8"
+        )
+        roadmap = (ROOT / "docs" / "component-roadmap.md").read_text(
+            encoding="utf-8"
+        )
+        catalog = (ROOT / "docs" / "portfolio.md").read_text(encoding="utf-8")
+        normalized_current = " ".join(current.split())
+
+        self.assertIn("`agentic-llm-router`", roadmap)
+        self.assertIn(
+            "require a separate release/publication gate", normalized_current
+        )
+        self.assertIn("Installation does not activate an extension", roadmap)
+        self.assertIn(
+            "[llm-router](https://github.com/krivonosoff161/llm-router) | `contract_only`",
+            catalog,
         )
 
     def test_legacy_security_projection_is_preserved_as_history(self) -> None:

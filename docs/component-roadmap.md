@@ -30,11 +30,13 @@ The files `security-portfolio-roadmap-public.yaml` and
 projection. They are no longer the current Security roadmap and must not override the Harness
 ecosystem contract.
 
-## Next documentation gates
+## Current installation projection
 
-1. Preserve the merged v1.3.0 status projection while the optional-extras stack is in review.
-2. After exact-head merges, repin the Harness merge SHA and regenerate install commands from
-   the merged package metadata rather than from review branches.
-3. Reject profile drift, broken links and unknown component identifiers in CI.
-4. Keep Trading governance separate from the Security ecosystem migration.
-5. Keep profile updates projection-only and authority-free.
+1. Harness main declares the source extras `transfer`, `handoff`, `playbooks`, `router`,
+   `filter`, and `all`; the router distribution coordinate is `agentic-llm-router`.
+2. These extras are available only from the exact merged source or a controlled wheelhouse
+   until a separate release publishes matching artifacts to public PyPI.
+3. Installation does not activate an extension. Metadata inspection, owner approval, and
+   explicit binding remain mandatory and Runtime Guard remains private `contract_only`.
+4. Profile CI rejects source-pin drift, broken links and unknown component identifiers.
+5. Trading governance remains separate and this profile remains authority-free.
