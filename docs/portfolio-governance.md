@@ -1,8 +1,8 @@
 # Portfolio Governance
 
 Status: **CURRENT**
-Governance version: `2026.08.29-v6`
-Verified: 2026-08-29
+Governance version: `2026.08.30-v7`
+Verified: 2026-08-30
 Authority: `none`
 
 The machine source is [`portfolio-governance.yaml`](portfolio-governance.yaml).
@@ -36,7 +36,7 @@ documents own local facts; history and continuity files are evidence only.
 - Work uses a registered `codex/*` task worktree and explicit-path staging.
 - Push and PR authority is task-scoped; merge remains a separate exact-head gate.
 - Public projections pin a merged source SHA and a content digest separately.
-- The current Security source pin is Harness `714f6b0c2ac9d371c24fa180b4434478a4a6535a`;
+- The current Security source pin is Harness `59bbdd42a34450f372e4b54c02de21b155e008c8`;
   open review branches cannot promote that merged projection.
 - Digest comparison normalizes only line endings to UTF-8 LF; semantic changes must
   change the digest.

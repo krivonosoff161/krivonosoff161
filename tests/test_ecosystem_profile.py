@@ -51,11 +51,11 @@ class EcosystemProfileTests(unittest.TestCase):
 
         self.assertEqual(
             security["harness_baseline"],
-            "714f6b0c2ac9d371c24fa180b4434478a4a6535a",
+            "59bbdd42a34450f372e4b54c02de21b155e008c8",
         )
         self.assertEqual(
             security["canonical_roadmap_sha256"],
-            "4e268b402b0f3dae960ba7b77e44361ee956b6656910abef52100078be64a672",
+            "263f0b985172579661d60de73da935a311b513213c438d210155c7310938af03",
         )
 
         for relative_path in (
@@ -63,7 +63,7 @@ class EcosystemProfileTests(unittest.TestCase):
             "docs/execution-map.md",
         ):
             text = (ROOT / relative_path).read_text(encoding="utf-8")
-            self.assertIn("Harness `714f6b0`", text)
+            self.assertIn("Harness `59bbdd4`", text)
 
     def test_installation_projection_preserves_release_and_activation_boundaries(self) -> None:
         current = (ROOT / "docs" / "current-portfolio-state.md").read_text(
@@ -76,10 +76,20 @@ class EcosystemProfileTests(unittest.TestCase):
         normalized_current = " ".join(current.split())
 
         self.assertIn("`agentic-llm-router`", roadmap)
-        self.assertIn(
-            "require a separate release/publication gate", normalized_current
-        )
+        self.assertIn("agentic-security-harness[router]==1.4.0", normalized_current)
+        self.assertIn("agentic-security-harness[all]==1.4.0", normalized_current)
+        self.assertIn("resolves exact companion versions from public PyPI", roadmap)
         self.assertIn("Installation does not activate an extension", roadmap)
+        for coordinate in (
+            "agentic-transfer-verifier==0.2.1",
+            "agentic-transfer-verifier-harness-extension==1.0.1",
+            "ai-agent-handoff==0.3.0",
+            "ai-agent-handoff-harness-extension==1.0.0",
+            "llm-safety-playbooks==0.1.0",
+            "agentic-llm-router==0.2.0",
+            "llm-cheap-filter==0.2.0",
+        ):
+            self.assertIn(coordinate, roadmap)
         self.assertIn(
             "[llm-router](https://github.com/krivonosoff161/llm-router) | `contract_only`",
             catalog,

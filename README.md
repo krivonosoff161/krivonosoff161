@@ -28,11 +28,13 @@ evidence that other people can inspect.
 My main public security project is
 [Agentic Security Harness](https://github.com/krivonosoff161/agentic-security-harness):
 a released Python toolkit and defensive benchmark for agent boundary failures. Version
-1.3.0 ships the stable 24-pattern corpus and the bounded v1.2 surfaces plus a closed
+1.4.0 ships the stable 24-pattern corpus and the bounded v1.2 surfaces plus a closed
 Extension SDK, metadata-only distribution inspection and operator lifecycle, offline
 Security Intelligence contracts, receipt auditors, optional corpus-pack contracts and a
-controlled literal-loopback provider/tool-host contour. Companion repositories are still
-separately gated and are not bundled into the published core.
+controlled literal-loopback provider/tool-host contour. Its explicit `transfer`, `handoff`,
+`playbooks`, `router`, `filter`, and `all` extras now install exact companion distributions
+from public PyPI. They remain passive: installation does not discover, approve, bind,
+configure, invoke, or activate a module.
 
 The trading stack is a separate applied direction, not a security side project:
 [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2) and
@@ -75,7 +77,8 @@ It is a defensive benchmark toolkit for measuring agentic AI failure modes with:
 - OpenAI-compatible external model/runtime checks;
 - remediation guidance;
 - schema validation and local report generation;
-- a stable `pip install agentic-security-harness` package and Linux-first quickstart;
+- a stable `pip install agentic-security-harness==1.4.0` package, passive optional extras,
+  and cross-platform installed-package quickstarts;
 - a provider-neutral Agent Host V1 offline workflow with canonical recordings;
 - active review-only Runtime Gateway work for local policy-before-tool-dispatch.
 
