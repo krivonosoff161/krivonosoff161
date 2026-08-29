@@ -19,7 +19,7 @@ EXPECTED_LEGACY_SECURITY_PROJECTION_SHA256 = (
     "d960d5a710c152c28ad9837ebd665a476d0fc99562076ff6f1c5f24e73dd0bd6"
 )
 EXPECTED_ECOSYSTEM_ROADMAP_SHA256 = (
-    "1c5c72e88ec18dade8b0828610d29cafd629a8595a64073de825a75cdff1a8a7"
+    "4e268b402b0f3dae960ba7b77e44361ee956b6656910abef52100078be64a672"
 )
 EXPECTED_TRADING_MANIFEST_SHA256 = (
     "de9567921c2df7326f365aa16ad8add50c809c05323c171914a9b3f24d90b52e"
@@ -76,9 +76,9 @@ def validate_governance(value: dict[str, Any]) -> None:
         raise GovernanceError("governance root shape drift")
     if value["schema_version"] != "AIPortfolioGovernance.v1":
         raise GovernanceError("unsupported governance schema")
-    if value["governance_version"] != "2026.08.26-v3":
+    if value["governance_version"] != "2026.08.29-v5":
         raise GovernanceError("unexpected governance version")
-    if value["verified_date"] != "2026-08-26" or value["authority"] != "none":
+    if value["verified_date"] != "2026-08-29" or value["authority"] != "none":
         raise GovernanceError("governance date or authority drift")
     if value["lower_level_rule"] != "narrow_only":
         raise GovernanceError("lower-level rules may only narrow governance")
