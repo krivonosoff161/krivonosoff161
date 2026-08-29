@@ -76,7 +76,7 @@ def validate_governance(value: dict[str, Any]) -> None:
         raise GovernanceError("governance root shape drift")
     if value["schema_version"] != "AIPortfolioGovernance.v1":
         raise GovernanceError("unsupported governance schema")
-    if value["governance_version"] != "2026.08.29-v5":
+    if value["governance_version"] != "2026.08.29-v6":
         raise GovernanceError("unexpected governance version")
     if value["verified_date"] != "2026-08-29" or value["authority"] != "none":
         raise GovernanceError("governance date or authority drift")

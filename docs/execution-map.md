@@ -2,9 +2,9 @@
 
 Status: **CURRENT**
 
-Last updated: 2026-08-23
+Last updated: 2026-08-29
 
-Security public roadmap contract baseline: Harness `28865fc`. Trading remains on its existing
+Security public roadmap contract baseline: Harness `714f6b0`. Trading remains on its existing
 `4649647` / `a23588c` baseline pending a separate documentation cycle.
 
 This page describes current cross-repository ownership and the next evidence
