@@ -2,7 +2,7 @@
 
 Status: **CURRENT**
 Verified: 2026-08-29
-Security public roadmap contract baseline: Harness `1c4f0f0`; Trading baseline remains
+Security public roadmap contract baseline: Harness `714f6b0`; Trading baseline remains
 `4649647` / `a23588c` pending its own documentation cycle.
 
 ## Security

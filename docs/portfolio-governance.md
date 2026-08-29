@@ -1,7 +1,7 @@
 # Portfolio Governance
 
 Status: **CURRENT**
-Governance version: `2026.08.29-v5`
+Governance version: `2026.08.29-v6`
 Verified: 2026-08-29
 Authority: `none`
 
@@ -36,7 +36,7 @@ documents own local facts; history and continuity files are evidence only.
 - Work uses a registered `codex/*` task worktree and explicit-path staging.
 - Push and PR authority is task-scoped; merge remains a separate exact-head gate.
 - Public projections pin a merged source SHA and a content digest separately.
-- The current Security source pin is Harness `1c4f0f0055e19eabf99e05e7dd88d393cc2c6eb1`;
+- The current Security source pin is Harness `714f6b0c2ac9d371c24fa180b4434478a4a6535a`;
   open review branches cannot promote that merged projection.
 - Digest comparison normalizes only line endings to UTF-8 LF; semantic changes must
   change the digest.

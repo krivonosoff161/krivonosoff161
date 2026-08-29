@@ -51,12 +51,19 @@ class EcosystemProfileTests(unittest.TestCase):
 
         self.assertEqual(
             security["harness_baseline"],
-            "1c4f0f0055e19eabf99e05e7dd88d393cc2c6eb1",
+            "714f6b0c2ac9d371c24fa180b4434478a4a6535a",
         )
         self.assertEqual(
             security["canonical_roadmap_sha256"],
             "4e268b402b0f3dae960ba7b77e44361ee956b6656910abef52100078be64a672",
         )
+
+        for relative_path in (
+            "docs/current-portfolio-state.md",
+            "docs/execution-map.md",
+        ):
+            text = (ROOT / relative_path).read_text(encoding="utf-8")
+            self.assertIn("Harness `714f6b0`", text)
 
     def test_installation_projection_preserves_release_and_activation_boundaries(self) -> None:
         current = (ROOT / "docs" / "current-portfolio-state.md").read_text(
