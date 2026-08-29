@@ -1,7 +1,7 @@
 # Security Portfolio
 
 Status: **CURRENT NAVIGATION**
-Verified: 2026-08-29
+Verified: 2026-08-30
 
 ## Two-hop review path
 
@@ -9,9 +9,10 @@ Verified: 2026-08-29
 2. **Architecture:** [Harness ecosystem components](https://github.com/krivonosoff161/agentic-security-harness/blob/main/docs/ecosystem-components.md).
 3. **Roadmap:** [public Harness ecosystem roadmap](https://github.com/krivonosoff161/agentic-security-harness/blob/main/docs/ecosystem-roadmap.md).
 4. **Evidence:** [Harness current state](https://github.com/krivonosoff161/agentic-security-harness/blob/main/docs/current-state.md) and [evidence showcase](https://github.com/krivonosoff161/agentic-security-harness/blob/main/docs/showcase/index.md).
-5. **Next gate:** the exact-source optional-extras stack is merged and CI-verified; a
-   separate release/publication gate is still required before those extras are installable
-   from public PyPI. v1.3.0 core remains the only published Harness install surface.
+5. **Current release:** Harness `v1.4.0` and all passive companion extras are installable
+   from public PyPI and were verified against exact release subjects. Publication does not
+   establish automatic activation, independent effectiveness, or production enforcement.
+   The next Security gate is separately authorized research and independent review.
 6. **Authority:** shadow/advisory only; enforcement, providers, devices, private
    data, sealed holdouts, release, and deployment remain separate owner gates.
 
