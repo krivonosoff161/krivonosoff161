@@ -1,41 +1,45 @@
 # Current AI Portfolio State
 
 Status: **CURRENT**
-Verified: 2026-08-30
-Security public roadmap contract baseline: Harness `59bbdd4`; Trading baseline remains
+Verified: 2026-10-18 for product positioning. Historical projection pins remain unchanged:
+Security public roadmap contract baseline Harness `59bbdd4`; Trading baseline
 `4649647` / `a23588c` pending its own documentation cycle.
 
 ## Security
 
 The federated Security ecosystem has one public machine-readable roadmap in
-`agentic-security-harness`. Harness v1.4.0 and the exact companion distributions are
-published on public PyPI. The `transfer`, `handoff`, `playbooks`, `router`, `filter`, and
-`all` extras resolve from a clean PyPI-only environment without editable installs, local
-paths, Git URLs, or a pre-existing wheelhouse. Transfer Verifier and AI
-Agent Handoff are `extension_candidate` components; Playbooks and Cheap Filter remain
-`standalone`; Router and private Runtime Guard remain `contract_only`. Runtime Guard is not
-part of the public optional extras.
+`agentic-security-harness`. Harness 1.14.2 is published, with its tag source
+`add81efaad40bf4ff9643a415058b6d912ed36ea` and [seven checked release jobs](https://github.com/krivonosoff161/agentic-security-harness/actions/runs/39063673573).
+It is a defensive falsification and evidence lab with a guarded writer.
+[agentic-action-authority](https://github.com/krivonosoff161/agentic-action-authority)
+owns exact-action approval and its optional Harness adapter reuses that writer.
+Action Authority [0.1.1 is published on PyPI](https://pypi.org/project/agentic-action-authority/0.1.1/)
+from tag source `281d4cb9c4620697f33005c6e0d628e41ff20fa0`, with
+[production release checks](https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39108500218)
+passing. Neither product establishes generic
+containment or the truth of external content. Publication does not establish
+effectiveness, independent review, production enforcement, or operational authority.
+Installing either package or the optional adapter does not approve an action,
+bind an extension, or activate enforcement. An operator must approve the exact
+action separately.
 
-The supported public install surface now includes commands such as
-`pip install "agentic-security-harness[router]==1.4.0"` and
-`pip install "agentic-security-harness[all]==1.4.0"`. Installing an extra never activates
-or binds it: metadata inspection, owner approval, configuration, invocation, and explicit
-binding remain separate steps. Publication is installation evidence, not effectiveness,
-independent review, production enforcement, or operational authority.
+The older Security R4 projection and its companion integration statuses remain
+historical, pinned evidence. They are not a current release inventory.
 
 - [Security Portfolio entry](security-portfolio.md)
 - [Public ecosystem roadmap](https://github.com/krivonosoff161/agentic-security-harness/blob/main/docs/ecosystem-roadmap.md)
 
-## Trading
+## Other projects: Trading
 
-The Trading Portfolio is a public research and paper-observation system. Its
+Trading development is paused pending hardware. The Trading Portfolio remains
+a public research and paper-observation system. Its
 canonical public-safe manifest belongs to `trading-bot-v2`; `honest-backtest`
 independently tries to falsify candidates. A validator pass means only "not
 rejected by these checks".
 
-Current gate: the separately authorized 48-hour paper-only canary remains
-unfinished. Live execution is outside the supported portfolio and requires a
-separate architecture and owner decision.
+This profile placement does not change Trading runtime status, its source-owned
+roadmap, or any paper canary gate. Live execution is outside the supported
+portfolio and requires a separate architecture and owner decision.
 
 - [Trading Portfolio entry](trading-portfolio.md)
 - [Machine projection](trading-portfolio-public.yaml)

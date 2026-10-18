@@ -30,6 +30,26 @@ class PortfolioGovernanceTests(unittest.TestCase):
         with self.assertRaisesRegex(GovernanceError, "owner drift"):
             validate_governance(value)
 
+    def test_published_release_requires_evidence(self) -> None:
+        value = copy.deepcopy(load_json(GOVERNANCE))
+        value["product_releases"][1]["evidence"] = ""
+        with self.assertRaisesRegex(GovernanceError, "product release evidence or scope drift"):
+            validate_governance(value)
+
+    def test_wrong_publication_receipt_is_rejected(self) -> None:
+        value = copy.deepcopy(load_json(GOVERNANCE))
+        value["product_releases"][1]["evidence"] = (
+            "https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39108339899"
+        )
+        with self.assertRaisesRegex(GovernanceError, "product release evidence or scope drift"):
+            validate_governance(value)
+
+    def test_product_scope_cannot_be_promoted_to_generic_containment(self) -> None:
+        value = copy.deepcopy(load_json(GOVERNANCE))
+        value["product_releases"][1]["scope"] = "generic_containment"
+        with self.assertRaisesRegex(GovernanceError, "product release evidence or scope drift"):
+            validate_governance(value)
+
     def test_semantic_digest_change_is_rejected(self) -> None:
         value = copy.deepcopy(load_json(GOVERNANCE))
         value["source_pins"]["trading"]["canonical_manifest_sha256"] = "0" * 64

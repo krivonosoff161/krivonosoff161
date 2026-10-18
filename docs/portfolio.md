@@ -2,7 +2,7 @@
 
 Status: **CURRENT**
 
-Verified: 2026-08-29
+Verified: 2026-10-18 for profile positioning; integration statuses below are historical projection values.
 
 This is a catalog, not a second product roadmap. Current state is in
 [`current-portfolio-state.md`](current-portfolio-state.md), and ownership rules
@@ -14,11 +14,20 @@ are in [`portfolio-governance.md`](portfolio-governance.md).
 |---|---|---|---|
 | `agentic-runtime-guard` (private) | `contract_only` | Private defensive research upstream and bounded shadow/runtime research | No public roadmap, production or operational authority |
 | [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness) | `suite_verified` | Public ecosystem core, roadmap, defensive benchmark and synthetic integration laboratory | No certification or production enforcement |
+| [agentic-action-authority](https://github.com/krivonosoff161/agentic-action-authority) | Separate product; [0.1.1 published](https://pypi.org/project/agentic-action-authority/0.1.1/) with [production checks](https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39108500218) | Exact-action approval | No generic containment, content-truth claim, or automatic approval |
 | [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier) | `extension_candidate` | Transfer provenance, freshness, capability, and authority checks | Advisory module only |
 | [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff) | `extension_candidate` | Practical file handoff protocol and pattern guard | Guard, not sandbox or verifier |
 | [llm-safety-playbooks](https://github.com/krivonosoff161/llm-safety-playbooks) | `standalone` | Human operating guidance | Guidance, not enforcement |
 
-## Trading Portfolio
+Harness 1.14.2 is a published defensive falsification and evidence lab with a
+guarded writer. Action Authority owns an optional Harness adapter that reuses
+that writer. Harness's [checked release jobs](https://github.com/krivonosoff161/agentic-security-harness/actions/runs/39063673573)
+belong to Harness. Action Authority's production checks cover its separate release.
+
+## Other projects: Trading Portfolio
+
+Trading development is paused pending hardware. This catalog placement does not
+alter the Trading source-owned roadmap or runtime status.
 
 | Repository | Owned role | Authority ceiling |
 |---|---|---|
@@ -33,8 +42,8 @@ are in [`portfolio-governance.md`](portfolio-governance.md).
 | [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter) | `standalone` | Deterministic and cheap-to-chief triage | Cannot lower a guard decision or establish correctness |
 | [krivonosoff161](https://github.com/krivonosoff161/krivonosoff161) | `standalone` | Public navigation and sanitized integration | Projection only; owns no upstream product claim |
 
-Integration status is projected from the merged Harness compatibility contract. It is not
-an installation, release or authority claim.
+Legacy integration status is projected from the earlier merged Harness
+compatibility contract. It is not a current installation, release or authority claim.
 
 ## Reading order
 

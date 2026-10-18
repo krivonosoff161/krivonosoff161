@@ -65,7 +65,7 @@ class EcosystemProfileTests(unittest.TestCase):
             text = (ROOT / relative_path).read_text(encoding="utf-8")
             self.assertIn("Harness `59bbdd4`", text)
 
-    def test_installation_projection_preserves_release_and_activation_boundaries(self) -> None:
+    def test_current_releases_and_historical_projection_preserve_activation_boundaries(self) -> None:
         current = (ROOT / "docs" / "current-portfolio-state.md").read_text(
             encoding="utf-8"
         )
@@ -76,8 +76,10 @@ class EcosystemProfileTests(unittest.TestCase):
         normalized_current = " ".join(current.split())
 
         self.assertIn("`agentic-llm-router`", roadmap)
-        self.assertIn("agentic-security-harness[router]==1.4.0", normalized_current)
-        self.assertIn("agentic-security-harness[all]==1.4.0", normalized_current)
+        self.assertIn("Harness 1.14.2 is published", normalized_current)
+        self.assertIn("agentic-action-authority/0.1.1/", normalized_current)
+        self.assertIn("Installing either package or the optional adapter does not approve an action", normalized_current)
+        self.assertIn("Neither product establishes generic containment or the truth of external content", normalized_current)
         self.assertIn("resolves exact companion versions from public PyPI", roadmap)
         self.assertIn("Installation does not activate an extension", roadmap)
         for coordinate in (
