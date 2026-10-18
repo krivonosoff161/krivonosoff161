@@ -1,7 +1,7 @@
 {
   "schema_version": "AIPortfolioGovernance.v1",
-  "governance_version": "2026.08.30-v7",
-  "verified_date": "2026-08-30",
+  "governance_version": "2026.10.18-v8",
+  "verified_date": "2026-10-18",
   "authority": "none",
   "portfolio_integrator": "krivonosoff161",
   "instruction_precedence": [
@@ -26,6 +26,7 @@
   "repository_owners": [
     {"id": "agentic-runtime-guard", "role": "private_security_research_upstream", "authority": "owned_module_only"},
     {"id": "agentic-security-harness", "role": "security_public_ecosystem_roadmap", "authority": "canonical_public"},
+    {"id": "agentic-action-authority", "role": "action_approval_product", "authority": "owned_module_only"},
     {"id": "trading-bot-v2", "role": "trading_portfolio", "authority": "canonical_public_safe"},
     {"id": "honest-backtest", "role": "skeptical_trading_validation", "authority": "owned_module_projection"},
     {"id": "krivonosoff161", "role": "portfolio_navigation_integration", "authority": "projection_only"},
@@ -50,6 +51,26 @@
       "hash_canonicalization": "utf8_lf"
     }
   },
+  "product_releases": [
+    {
+      "repository": "agentic-security-harness",
+      "version": "1.14.2",
+      "status": "published_verified",
+      "source_sha": "add81efaad40bf4ff9643a415058b6d912ed36ea",
+      "evidence": "https://github.com/krivonosoff161/agentic-security-harness/actions/runs/39063673573",
+      "scope": "defensive_falsification_and_evidence_lab_with_guarded_writer",
+      "authority": "none"
+    },
+    {
+      "repository": "agentic-action-authority",
+      "version": "0.1.1",
+      "status": "published_verified",
+      "source_sha": "281d4cb9c4620697f33005c6e0d628e41ff20fa0",
+      "evidence": "https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39108500218",
+      "scope": "exact_action_approval_product_with_optional_harness_adapter",
+      "authority": "none"
+    }
+  ],
   "status_values": ["current", "implemented", "implemented_bounded", "partial", "planned", "owner_gated", "historical", "superseded"],
   "authority_values": ["none", "advisory", "paper_only", "projection_only", "owned_module_only", "canonical_public", "separately_owner_gated"],
   "projection_rules": [

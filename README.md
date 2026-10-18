@@ -1,13 +1,12 @@
 # Dmitry Krivonosov
 
-I build AI-assisted systems in two connected directions:
+I build AI-assisted systems with a current focus on agentic AI security:
 
 1. **Agentic AI security tooling** - benchmarks, handoff checks, and safety
    workflows for agents that read files, tools, memory, model output, and other
    agents.
-2. **AI-assisted trading systems** - a trading research and paper-observation
-   stack where LLM output is treated as a proposal, then challenged by
-   validators, backtests, evidence gates, and owner review.
+2. **Other projects** - an AI-assisted trading research and paper-observation
+   stack, with development paused pending hardware.
 
 The common rule is simple:
 
@@ -25,30 +24,34 @@ evidence that other people can inspect.
 
 ## Current Focus
 
-My main public security project is
-[Agentic Security Harness](https://github.com/krivonosoff161/agentic-security-harness):
-a released Python toolkit and defensive benchmark for agent boundary failures. Version
-1.4.0 ships the stable 24-pattern corpus and the bounded v1.2 surfaces plus a closed
-Extension SDK, metadata-only distribution inspection and operator lifecycle, offline
-Security Intelligence contracts, receipt auditors, optional corpus-pack contracts and a
-controlled literal-loopback provider/tool-host contour. Its explicit `transfer`, `handoff`,
-`playbooks`, `router`, `filter`, and `all` extras now install exact companion distributions
-from public PyPI. They remain passive: installation does not discover, approve, bind,
-configure, invoke, or activate a module.
+[Agentic Action Authority](https://github.com/krivonosoff161/agentic-action-authority)
+lets an application require an operator's signed approval for one exact document
+action. Its [0.1.1 package is on PyPI](https://pypi.org/project/agentic-action-authority/0.1.1/).
+The approval core installs independently; the optional Harness adapter creates
+the approved file through Harness's existing guarded writer.
 
-The trading stack is a separate applied direction, not a security side project:
+[Agentic Security Harness](https://github.com/krivonosoff161/agentic-security-harness)
+is the defensive testing and evidence lab: reproduce agent boundary failures,
+compare controls, and inspect the result. Its current published version is 1.14.2.
+
+These tools address bounded action and workflow controls, not arbitrary-agent
+containment or content truth. [Current release evidence and boundaries](docs/current-portfolio-state.md)
+link the exact sources and checks for each product.
+
+Under Other projects, the trading stack remains a separate applied direction:
 [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2) and
 [honest-backtest](https://github.com/krivonosoff161/honest-backtest) implement a
-public research and paper-validation discipline. Live execution is outside the
+public research and paper-validation discipline. Development is paused pending
+hardware. Live execution is outside the
 supported portfolio and would require a separate architecture and owner decision.
 
 ## Portfolio Structure
 
 | Line | Public projects | What it is for |
 |---|---|---|
-| Agentic AI security core | [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness), [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier), [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff) | Defensive benchmark, trust/provenance transfer checks, and practical handoff boundaries for AI agents. |
+| Agentic AI security core | [agentic-action-authority](https://github.com/krivonosoff161/agentic-action-authority), [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness), [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier), [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff) | Exact-action approval product, defensive falsification and evidence lab, transfer checks, and handoff boundaries. |
 | LLM safety playbooks | [llm-safety-playbooks](https://github.com/krivonosoff161/llm-safety-playbooks) | Short practical skills for safer LLM use: data vs instructions, secrets, generated URLs/packages, Git actions, handoffs, and safe research scope. |
-| AI-assisted trading system | [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2), [honest-backtest](https://github.com/krivonosoff161/honest-backtest) | News/event scanner, strategy lab, validator/backtest discipline, paper-only gates, and a controlled path toward automation. |
+| Other projects: AI-assisted trading | [trading-bot-v2](https://github.com/krivonosoff161/trading-bot-v2), [honest-backtest](https://github.com/krivonosoff161/honest-backtest) | Research and paper-validation discipline; development paused pending hardware. |
 | LLM operations | [llm-router](https://github.com/krivonosoff161/llm-router), [llm-cheap-filter](https://github.com/krivonosoff161/llm-cheap-filter) | Cost-aware routing, cheap-to-chief filtering, provider-neutral calls, and controlled LLM spend. |
 
 The documentation hierarchy and public/private boundaries are defined in the
@@ -77,23 +80,22 @@ It is a defensive benchmark toolkit for measuring agentic AI failure modes with:
 - OpenAI-compatible external model/runtime checks;
 - remediation guidance;
 - schema validation and local report generation;
-- a stable `pip install agentic-security-harness==1.4.0` package, passive optional extras,
-  and cross-platform installed-package quickstarts;
+- a published 1.14.2 release with a guarded writer reused by Action Authority's optional adapter;
 - a provider-neutral Agent Host V1 offline workflow with canonical recordings;
-- active review-only Runtime Gateway work for local policy-before-tool-dispatch.
+- bounded synthetic Runtime Gateway reference work for policy-before-tool-dispatch.
 
 It is not a hacking toolkit and not a promise of complete protection. It is a
 measurement and learning lab for authorized, synthetic, local, or explicitly
 owned targets.
 
-The bounded Runtime Gateway reference contour is published in v1.3.0. It uses synthetic
-tools and credential-free fixtures; live provider credentials, arbitrary tool execution,
-deployment, and production enforcement are not current public capabilities.
+The Runtime Gateway reference contour published in v1.3.0 uses synthetic tools
+and credential-free fixtures. That historical reference does not establish
+deployment or production enforcement.
 
-## Trading Research Stack
+## Other Projects: Trading Research Stack
 
-The trading line is an applied AI-assisted trading system, not a signal service
-and not a public profitability claim.
+Trading development is paused pending hardware. The trading line is an applied
+AI-assisted research system, not a signal service or public profitability claim.
 
 Public repositories show the method:
 
@@ -187,6 +189,7 @@ document precedence are defined in the
 ## Repositories
 
 - Security benchmark/evidence: [agentic-security-harness](https://github.com/krivonosoff161/agentic-security-harness)
+- Exact-action approval: [agentic-action-authority](https://github.com/krivonosoff161/agentic-action-authority)
 - Transfer verification: [agentic-transfer-verifier](https://github.com/krivonosoff161/agentic-transfer-verifier)
 - Agent handoff protocol: [ai-agent-handoff](https://github.com/krivonosoff161/ai-agent-handoff)
 - Safety guidance: [llm-safety-playbooks](https://github.com/krivonosoff161/llm-safety-playbooks)

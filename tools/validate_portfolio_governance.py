@@ -67,6 +67,7 @@ def validate_governance(value: dict[str, Any]) -> None:
         "document_roles",
         "repository_owners",
         "source_pins",
+        "product_releases",
         "status_values",
         "authority_values",
         "projection_rules",
@@ -76,9 +77,9 @@ def validate_governance(value: dict[str, Any]) -> None:
         raise GovernanceError("governance root shape drift")
     if value["schema_version"] != "AIPortfolioGovernance.v1":
         raise GovernanceError("unsupported governance schema")
-    if value["governance_version"] != "2026.08.30-v7":
+    if value["governance_version"] != "2026.10.18-v8":
         raise GovernanceError("unexpected governance version")
-    if value["verified_date"] != "2026-08-30" or value["authority"] != "none":
+    if value["verified_date"] != "2026-10-18" or value["authority"] != "none":
         raise GovernanceError("governance date or authority drift")
     if value["lower_level_rule"] != "narrow_only":
         raise GovernanceError("lower-level rules may only narrow governance")
@@ -91,6 +92,7 @@ def validate_governance(value: dict[str, Any]) -> None:
     expected_roles = {
         "private_security_research_upstream": "agentic-runtime-guard",
         "security_public_ecosystem_roadmap": "agentic-security-harness",
+        "action_approval_product": "agentic-action-authority",
         "trading_portfolio": "trading-bot-v2",
         "skeptical_trading_validation": "honest-backtest",
         "portfolio_navigation_integration": "krivonosoff161",
@@ -98,6 +100,32 @@ def validate_governance(value: dict[str, Any]) -> None:
     by_role = {item["role"]: item["id"] for item in owners}
     if any(by_role.get(role) != owner for role, owner in expected_roles.items()):
         raise GovernanceError("canonical repository owner drift")
+
+    releases = value["product_releases"]
+    if not isinstance(releases, list) or len(releases) != 2:
+        raise GovernanceError("product release set drift")
+    expected_releases = [
+        {
+            "repository": "agentic-security-harness",
+            "version": "1.14.2",
+            "status": "published_verified",
+            "source_sha": "add81efaad40bf4ff9643a415058b6d912ed36ea",
+            "evidence": "https://github.com/krivonosoff161/agentic-security-harness/actions/runs/39063673573",
+            "scope": "defensive_falsification_and_evidence_lab_with_guarded_writer",
+            "authority": "none",
+        },
+        {
+            "repository": "agentic-action-authority",
+            "version": "0.1.1",
+            "status": "published_verified",
+            "source_sha": "281d4cb9c4620697f33005c6e0d628e41ff20fa0",
+            "evidence": "https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39108500218",
+            "scope": "exact_action_approval_product_with_optional_harness_adapter",
+            "authority": "none",
+        },
+    ]
+    if releases != expected_releases:
+        raise GovernanceError("product release evidence or scope drift")
 
     pins = value["source_pins"]
     security = pins["security"]

@@ -1,8 +1,8 @@
 # Portfolio Governance
 
 Status: **CURRENT**
-Governance version: `2026.08.30-v7`
-Verified: 2026-08-30
+Governance version: `2026.10.18-v8`
+Verified: 2026-10-18
 Authority: `none`
 
 The machine source is [`portfolio-governance.yaml`](portfolio-governance.yaml).
@@ -14,6 +14,7 @@ promote Security or Trading product claims.
 | Truth | Owner | Profile role |
 |---|---|---|
 | Public Security ecosystem roadmap | `agentic-security-harness` | Link to the public machine contract and generated views |
+| Exact-action approval product | `agentic-action-authority` | Link to its separately owned release and bounded integration contract |
 | Private Security research upstream | `agentic-runtime-guard` | Consume only sanitized component and research projections |
 | Trading Portfolio | `trading-bot-v2` | Consume sanitized machine projection only |
 | Skeptical Trading validation | `honest-backtest` | Preserve its bounded non-claim |
@@ -22,6 +23,14 @@ promote Security or Trading product claims.
 Support repositories own only their declared modules. No support library, profile
 page, model review, or documentation merge can promote a portfolio status or grant
 operational authority.
+
+The [product release entries](portfolio-governance.yaml) pin the separately
+verified Harness 1.14.2 and [Action Authority 0.1.1](https://pypi.org/project/agentic-action-authority/0.1.1/)
+publications. Action Authority addresses approval for an exact
+action and owns an optional Harness adapter that reuses the Harness 1.14.2
+guarded writer. Harness is the defensive falsification and evidence lab.
+Neither product claims generic containment
+or the truth of external content.
 
 ## Instruction and document precedence
 
@@ -36,8 +45,10 @@ documents own local facts; history and continuity files are evidence only.
 - Work uses a registered `codex/*` task worktree and explicit-path staging.
 - Push and PR authority is task-scoped; merge remains a separate exact-head gate.
 - Public projections pin a merged source SHA and a content digest separately.
-- The current Security source pin is Harness `59bbdd42a34450f372e4b54c02de21b155e008c8`;
-  open review branches cannot promote that merged projection.
+- The preserved historical Security projection pin is Harness
+  `59bbdd42a34450f372e4b54c02de21b155e008c8`; the separate current
+  product release pin is in the machine governance. Open review branches cannot
+  promote the historical projection.
 - Digest comparison normalizes only line endings to UTF-8 LF; semantic changes must
   change the digest.
 
