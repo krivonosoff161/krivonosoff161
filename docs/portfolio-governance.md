@@ -1,8 +1,8 @@
 # Portfolio Governance
 
 Status: **CURRENT**
-Governance version: `2026.10.18-v8`
-Verified: 2026-10-18
+Governance version: `2026.10.19-v9`
+Verified: 2026-10-19
 Authority: `none`
 
 The machine source is [`portfolio-governance.yaml`](portfolio-governance.yaml).
@@ -25,7 +25,7 @@ page, model review, or documentation merge can promote a portfolio status or gra
 operational authority.
 
 The [product release entries](portfolio-governance.yaml) pin the separately
-verified Harness 1.14.2 and [Action Authority 0.1.1](https://pypi.org/project/agentic-action-authority/0.1.1/)
+verified Harness 1.14.2 and [Action Authority 0.2.0](https://pypi.org/project/agentic-action-authority/0.2.0/)
 publications. Action Authority addresses approval for an exact
 action and owns an optional Harness adapter that reuses the Harness 1.14.2
 guarded writer. Harness is the defensive falsification and evidence lab.

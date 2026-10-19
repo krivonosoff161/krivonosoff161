@@ -77,9 +77,9 @@ def validate_governance(value: dict[str, Any]) -> None:
         raise GovernanceError("governance root shape drift")
     if value["schema_version"] != "AIPortfolioGovernance.v1":
         raise GovernanceError("unsupported governance schema")
-    if value["governance_version"] != "2026.10.18-v8":
+    if value["governance_version"] != "2026.10.19-v9":
         raise GovernanceError("unexpected governance version")
-    if value["verified_date"] != "2026-10-18" or value["authority"] != "none":
+    if value["verified_date"] != "2026-10-19" or value["authority"] != "none":
         raise GovernanceError("governance date or authority drift")
     if value["lower_level_rule"] != "narrow_only":
         raise GovernanceError("lower-level rules may only narrow governance")
@@ -116,10 +116,10 @@ def validate_governance(value: dict[str, Any]) -> None:
         },
         {
             "repository": "agentic-action-authority",
-            "version": "0.1.1",
+            "version": "0.2.0",
             "status": "published_verified",
-            "source_sha": "281d4cb9c4620697f33005c6e0d628e41ff20fa0",
-            "evidence": "https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39108500218",
+            "source_sha": "d5462692c2e4788364788ebc3fc11458c5abaf1c",
+            "evidence": "https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39203940701",
             "scope": "exact_action_approval_product_with_optional_harness_adapter",
             "authority": "none",
         },

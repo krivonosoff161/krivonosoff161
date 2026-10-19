@@ -39,7 +39,7 @@ class PortfolioGovernanceTests(unittest.TestCase):
     def test_wrong_publication_receipt_is_rejected(self) -> None:
         value = copy.deepcopy(load_json(GOVERNANCE))
         value["product_releases"][1]["evidence"] = (
-            "https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39108339899"
+            "https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39203686111"
         )
         with self.assertRaisesRegex(GovernanceError, "product release evidence or scope drift"):
             validate_governance(value)

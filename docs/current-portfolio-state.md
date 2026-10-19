@@ -1,7 +1,7 @@
 # Current AI Portfolio State
 
 Status: **CURRENT**
-Verified: 2026-10-18 for product positioning. Historical projection pins remain unchanged:
+Verified: 2026-10-19 for product positioning. Historical projection pins remain unchanged:
 Security public roadmap contract baseline Harness `59bbdd4`; Trading baseline
 `4649647` / `a23588c` pending its own documentation cycle.
 
@@ -13,9 +13,9 @@ The federated Security ecosystem has one public machine-readable roadmap in
 It is a defensive falsification and evidence lab with a guarded writer.
 [agentic-action-authority](https://github.com/krivonosoff161/agentic-action-authority)
 owns exact-action approval and its optional Harness adapter reuses that writer.
-Action Authority [0.1.1 is published on PyPI](https://pypi.org/project/agentic-action-authority/0.1.1/)
-from tag source `281d4cb9c4620697f33005c6e0d628e41ff20fa0`, with
-[production release checks](https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39108500218)
+Action Authority [0.2.0 is published on PyPI](https://pypi.org/project/agentic-action-authority/0.2.0/)
+from tag source `d5462692c2e4788364788ebc3fc11458c5abaf1c`, with
+[production release checks](https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39203940701)
 passing. Neither product establishes generic
 containment or the truth of external content. Publication does not establish
 effectiveness, independent review, production enforcement, or operational authority.
