@@ -1,7 +1,7 @@
 {
   "schema_version": "AIPortfolioGovernance.v1",
-  "governance_version": "2026.10.18-v8",
-  "verified_date": "2026-10-18",
+  "governance_version": "2026.10.19-v9",
+  "verified_date": "2026-10-19",
   "authority": "none",
   "portfolio_integrator": "krivonosoff161",
   "instruction_precedence": [
@@ -63,10 +63,10 @@
     },
     {
       "repository": "agentic-action-authority",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "status": "published_verified",
-      "source_sha": "281d4cb9c4620697f33005c6e0d628e41ff20fa0",
-      "evidence": "https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39108500218",
+      "source_sha": "d5462692c2e4788364788ebc3fc11458c5abaf1c",
+      "evidence": "https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39203940701",
       "scope": "exact_action_approval_product_with_optional_harness_adapter",
       "authority": "none"
     }

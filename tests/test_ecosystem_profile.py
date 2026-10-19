@@ -77,7 +77,7 @@ class EcosystemProfileTests(unittest.TestCase):
 
         self.assertIn("`agentic-llm-router`", roadmap)
         self.assertIn("Harness 1.14.2 is published", normalized_current)
-        self.assertIn("agentic-action-authority/0.1.1/", normalized_current)
+        self.assertIn("agentic-action-authority/0.2.0/", normalized_current)
         self.assertIn("Installing either package or the optional adapter does not approve an action", normalized_current)
         self.assertIn("Neither product establishes generic containment or the truth of external content", normalized_current)
         self.assertIn("resolves exact companion versions from public PyPI", roadmap)
