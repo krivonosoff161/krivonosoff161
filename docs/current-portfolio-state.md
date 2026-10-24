@@ -1,7 +1,8 @@
 # Current AI Portfolio State
 
 Status: **CURRENT**
-Verified: 2026-10-19 for product positioning. Historical projection pins remain unchanged:
+Verified: 2026-10-24 for the Action Authority 0.3.0 release. Historical Security
+and Trading projection pins remain unchanged:
 Security public roadmap contract baseline Harness `59bbdd4`; Trading baseline
 `4649647` / `a23588c` pending its own documentation cycle.
 
@@ -13,10 +14,15 @@ The federated Security ecosystem has one public machine-readable roadmap in
 It is a defensive falsification and evidence lab with a guarded writer.
 [agentic-action-authority](https://github.com/krivonosoff161/agentic-action-authority)
 owns exact-action approval and its optional Harness adapter reuses that writer.
-Action Authority [0.2.0 is published on PyPI](https://pypi.org/project/agentic-action-authority/0.2.0/)
-from tag source `d5462692c2e4788364788ebc3fc11458c5abaf1c`, with
-[production release checks](https://github.com/krivonosoff161/agentic-action-authority/actions/runs/39203940701)
-passing. Neither product establishes generic
+Action Authority [0.3.0 is published on PyPI](https://pypi.org/project/agentic-action-authority/0.3.0/)
+from tag source `f837da0e2eb34fdded3b9981325fc0e770c5ad3f`. The
+[tag build](https://github.com/krivonosoff161/agentic-action-authority/actions/runs/40075405149),
+[TestPyPI publication](https://github.com/krivonosoff161/agentic-action-authority/actions/runs/40075663863)
+and [PyPI publication](https://github.com/krivonosoff161/agentic-action-authority/actions/runs/40075923312)
+completed; both publication runs passed seven jobs. The tag wheel SHA-256 is
+`0038c35974ef77f4da08a1c778559c09df8fd5194f2260cfcd34d8654d106601`;
+each Windows/Linux lane passed core 33 and Harness 112 checks with zero skips.
+Neither product establishes generic
 containment or the truth of external content. Publication does not establish
 effectiveness, independent review, production enforcement, or operational authority.
 Installing either package or the optional adapter does not approve an action,
