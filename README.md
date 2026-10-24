@@ -26,7 +26,8 @@ evidence that other people can inspect.
 
 [Agentic Action Authority](https://github.com/krivonosoff161/agentic-action-authority)
 lets an application require an operator's signed approval for one exact document
-action. Its [0.2.0 package is on PyPI](https://pypi.org/project/agentic-action-authority/0.2.0/).
+action. Its [0.3.0 package is on PyPI](https://pypi.org/project/agentic-action-authority/0.3.0/),
+with [verified production release checks](https://github.com/krivonosoff161/agentic-action-authority/actions/runs/40075923312).
 The approval core installs independently; the optional Harness adapter creates
 the approved file through Harness's existing guarded writer.
 
